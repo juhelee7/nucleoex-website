@@ -40,7 +40,7 @@ assets/img/                로고, 히어로 배경, 기술 이미지, 파비콘
 
 ## CSS/JS를 고친 뒤 (캐시 주의)
 
-`index.html`의 `main.css?v=2026112116`, `i18n.js?v=...`, `main.js?v=...` 끝의 숫자를 한 단계 올려 주세요.
+`index.html`의 `main.css?v=2026112118`, `i18n.js?v=...`, `main.js?v=...` 끝의 숫자를 한 단계 올려 주세요.
 GitHub Pages와 방문자 브라우저가 예전 파일을 계속 쓰는 것을 막습니다.
 
 ## 배포
