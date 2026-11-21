@@ -817,13 +817,26 @@ ul, ol { list-style: none; }
 
 /* ---------- CEO ---------- */
 .ceo { overflow: hidden; }
-.ceo-inner { position: relative; max-width: 940px; }
+.ceo-inner { position: relative; }
+.ceo-inner::after {
+  content: "";
+  position: absolute;
+  right: -60px;
+  top: 50%;
+  width: 420px;
+  height: 420px;
+  transform: translateY(-50%);
+  background: url("../img/mark-white.png") center/contain no-repeat;
+  opacity: .05;
+  pointer-events: none;
+}
 .ceo blockquote {
   margin: 0 0 40px;
   padding-left: clamp(18px, 3vw, 32px);
   border-left: 2px solid var(--teal-500);
 }
 .ceo blockquote p {
+  max-width: 880px;
   font-size: clamp(22px, 2.9vw, 36px);
   line-height: 1.42;
   font-weight: 600;
@@ -836,7 +849,7 @@ ul, ol { list-style: none; }
   line-height: 1.85;
   color: rgba(255, 255, 255, .66);
   margin-bottom: 14px;
-  max-width: 720px;
+  max-width: 780px;
   word-break: keep-all;
 }
 .signature {
@@ -950,7 +963,7 @@ ul, ol { list-style: none; }
   gap: 32px;
   align-items: start;
 }
-.footer-brand img { height: 24px; margin-bottom: 14px; opacity: .9; }
+.footer-brand img { height: 26px; width: auto; margin-bottom: 14px; opacity: .9; }
 .footer-brand p { font-size: 13px; line-height: 1.6; max-width: 280px; }
 .footer-nav { display: flex; flex-wrap: wrap; gap: 8px 22px; font-size: 13.5px; }
 .footer-nav a { transition: color .2s; }
@@ -1030,6 +1043,7 @@ ul, ol { list-style: none; }
   .tech-card:last-child .tech-media { aspect-ratio: 16 / 10; }
   .facts { grid-template-columns: 1fr; }
   .facts div:nth-child(odd) { padding-right: 0; }
+  .ceo-inner::after { display: none; }
 }
 
 @media (max-width: 600px) {
