@@ -189,7 +189,7 @@ window.NUCLEOEX_I18N = {
     "tech.t3c2": "Nanostructures",
     "tech.t3c3": "Tailored material design",
     "tech.fLabel": "Bio-derived molecule platform",
-    "tech.fTitle": "The flame-retardant synergy of a small bio-derived addition",
+    "tech.fTitle": "The flame-retardant synergy<br>of a small bio-derived addition",
     "tech.fDesc": "Bio-derived substances such as nucleic acids and other biomolecules already carry the components that flame retardancy needs inside a single molecule. NucleoEX showed that adding just a small amount of these bio-derived substances creates a strong synergy with existing halogen-free flame-retardant systems and lifts flame-retardant efficiency considerably, and we were the first to report this bio-based flame retardant; we hold the related core patents.",
     "tech.f1": "Halogen-free: replaces brominated and chlorinated retardants",
     "tech.f2": "Self-extinguishing: combustion stops on its own once the flame is removed",
