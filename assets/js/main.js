@@ -58,7 +58,6 @@
     });
 
     document.documentElement.setAttribute("lang", lang);
-    document.documentElement.setAttribute("data-lang", lang);
     if (t["meta.title"]) document.title = t["meta.title"];
     setMeta('meta[name="description"]', t["meta.desc"]);
     setMeta('meta[property="og:title"]', t["meta.title"]);
@@ -77,7 +76,7 @@
       }
     }
 
-    document.querySelectorAll("[data-lang]").forEach(function (b) {
+    document.querySelectorAll("button[data-lang]").forEach(function (b) {
       var on = b.getAttribute("data-lang") === lang;
       b.classList.toggle("is-active", on);
       b.setAttribute("aria-pressed", on ? "true" : "false");
@@ -101,7 +100,7 @@
 
   /* Delegated on the document so the switch also works from the mobile drawer. */
   document.addEventListener("click", function (e) {
-    var hit = e.target && e.target.closest ? e.target.closest("[data-lang]") : null;
+    var hit = e.target && e.target.closest ? e.target.closest("button[data-lang]") : null;
     if (!hit) return;
     var lang = hit.getAttribute("data-lang");
     if (!lang) return;
