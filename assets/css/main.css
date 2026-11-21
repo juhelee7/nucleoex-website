@@ -637,10 +637,10 @@ ul, ol { list-style: none; }
 
 /* ---------- Milestones ---------- */
 .mile-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-  gap: clamp(32px, 5vw, 76px);
-  align-items: start;
+  display: block;
+}
+.milestones .container {
+  max-width: calc(840px + 2 * var(--pad));
 }
 .timeline { position: relative; }
 .timeline::before {
@@ -715,44 +715,10 @@ ul, ol { list-style: none; }
   line-height: 1.62;
   color: var(--ink-soft);
   word-break: keep-all;
-  max-width: 34em;
 }
 .mile-rows .is-key .what {
   font-weight: 700;
   color: var(--ink);
-}
-
-.cred-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1px;
-  background: var(--line);
-  border: 1px solid var(--line);
-}
-.cred {
-  padding: 28px 26px;
-  background: var(--white);
-}
-.cred-cat {
-  display: block;
-  margin-bottom: 10px;
-  font-size: 11.5px;
-  font-weight: 700;
-  letter-spacing: .06em;
-  color: var(--brand);
-}
-.cred h3 {
-  font-size: 15.5px;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  margin-bottom: 6px;
-  word-break: keep-all;
-}
-.cred p {
-  font-size: 13.5px;
-  color: var(--muted);
-  line-height: 1.65;
-  word-break: keep-all;
 }
 
 /* ---------- CEO ---------- */
@@ -966,7 +932,7 @@ ul, ol { list-style: none; }
   .tech-lead { grid-template-columns: 1fr; }
   .tech-lead-media { min-height: 280px; border-right: 0; border-bottom: 1px solid var(--line-dark); }
   .feature { grid-template-columns: 1fr; }
-  .mile-layout { grid-template-columns: 1fr; }
+
   .contact-grid { grid-template-columns: 1fr; }
   .footer-inner { grid-template-columns: 1fr 1fr; }
   .footer-legal { grid-column: 1 / -1; }
@@ -1007,7 +973,6 @@ ul, ol { list-style: none; }
   .mile-rows li { gap: 10px; }
   .mile-rows .when { flex: 0 0 62px; font-size: 12px; }
   .mile-rows .what { font-size: 14.5px; }
-  .cred-grid { grid-template-columns: 1fr; }
   .contact-list li { grid-template-columns: 1fr; gap: 4px; }
   .contact-cta .btn { flex: 1 1 auto; }
   .footer-inner { grid-template-columns: 1fr; gap: 28px; }
