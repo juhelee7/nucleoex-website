@@ -25,7 +25,7 @@ window.NUCLEOEX_I18N = {
     "about.label": "회사 소개",
     "about.title": "연구실의 발견을,<br>산업의 표준으로",
     "about.lead": "뉴클레오엑스는 ‘생물 유래 물질의 신개념 소재로서의 확장’이라는 한 가지 명제에서 출발했습니다.",
-    "about.p1": "성균관대학교 바이오-나노 소재 연구실에서 축적한 연구를 바탕으로 실험실 창업을 통해 설립된 딥테크 기업입니다. 생명체의 생존에 핵심적인 역할을 하는 생물 유래 분자를 산업 소재로 전환하는 공정과 설계 원리를 보유하고 있습니다.",
+    "about.p1": "성균관대학교 바이오-나노 소재 연구실(Biological &amp; Nanoscale Materials Lab)에서 축적한 연구를 바탕으로 실험실 창업을 통해 설립된 딥테크 기업입니다. 생명체의 생존에 핵심적인 역할을 하는 생물 유래 분자를 산업 소재로 전환하는 공정과 설계 원리를 보유하고 있습니다.",
     "about.p2": "바이오-나노 융합 소재와 미래 지향형 친환경 소재를 통해 인류의 지속가능성에 기여합니다. ESG가 산업의 표준이 되어가는 흐름 속에서, 인간과 환경을 먼저 생각하는 소재 기업을 만들어 갑니다.",
     "about.f1k": "설립",
     "about.f1v": "2022. 08 법인 설립",
@@ -148,7 +148,7 @@ window.NUCLEOEX_I18N = {
 
   en: {
     "meta.title": "Engineering Tomorrow's Materials from Biology | NucleoEX",
-    "meta.desc": "NucleoEX Co., Ltd. is a deep-tech materials company founded as a spin-off from the bio-nano materials research lab at Sungkyunkwan University. We develop eco-friendly bio-based flame retardants, bio and environmental diagnostic sensors, and bio-composite functional materials.",
+    "meta.desc": "NucleoEX Co., Ltd. is a deep-tech materials company founded as a spin-off from the Biological & Nanoscale Materials Lab at Sungkyunkwan University. We develop eco-friendly bio-based flame retardants, bio and environmental diagnostic sensors, and bio-composite functional materials.",
 
     "a11y.skip": "Skip to content",
     "nav.about": "Company",
@@ -164,14 +164,14 @@ window.NUCLEOEX_I18N = {
 
     "hero.eyebrow": "A deep-tech materials company spun out of Sungkyunkwan University",
     "hero.title": "Tomorrow's materials,<br>designed from biology",
-    "hero.lede": "NucleoEX is a deep-tech materials company built on original technology from the bio-nano materials research lab at Sungkyunkwan University. Our core business is an eco-friendly bio-based flame retardant made from bio-derived molecules, with applications expanding across automotive, battery, industrial materials, and defense.",
+    "hero.lede": "NucleoEX is a deep-tech materials company built on original technology from the Biological & Nanoscale Materials Lab at Sungkyunkwan University. Our core business is an eco-friendly bio-based flame retardant made from bio-derived molecules, with applications expanding across automotive, battery, industrial materials, and defense.",
     "hero.cta1": "Explore our technology",
     "hero.cta2": "IR & Partnership",
 
     "about.label": "Company",
     "about.title": "From a lab discovery<br>to an industry standard",
     "about.lead": "NucleoEX began with a single proposition: extending bio-derived substances into a new class of advanced materials.",
-    "about.p1": "We are a deep-tech company founded through a lab spin-off, building on research accumulated at the bio-nano materials research lab at Sungkyunkwan University. We hold the process and molecular design principles that turn bio-derived molecules, central to how living organisms survive, into industrial materials.",
+    "about.p1": "We are a deep-tech company founded through a lab spin-off, building on research accumulated at the Biological & Nanoscale Materials Lab at Sungkyunkwan University. We hold the process and molecular design principles that turn bio-derived molecules, central to how living organisms survive, into industrial materials.",
     "about.p2": "Through bio-nano convergence materials and future-oriented eco-friendly materials, we contribute to a more sustainable industry. As ESG becomes the standard, we are building a materials company that puts people and the environment first.",
     "about.f1k": "Founded",
     "about.f1v": "August 2022",
@@ -224,7 +224,7 @@ window.NUCLEOEX_I18N = {
     "why.i2t": "Regulatory readiness",
     "why.i2d": "Our halogen-free materials respond ahead of tightening environmental regulations and ESG requirements.",
     "why.i3t": "Proven research base",
-    "why.i3d": "We build on the accumulated research and international publications of the bio-nano materials research lab at Sungkyunkwan University.",
+    "why.i3d": "We build on the accumulated research and international publications of the Biological & Nanoscale Materials Lab at Sungkyunkwan University.",
     "why.i4t": "Commercialization",
     "why.i4d": "Deep-Tech TIPS selection, institutional investment, venture certification, and incubator residency connect our research to products.",
 
@@ -267,7 +267,7 @@ window.NUCLEOEX_I18N = {
 
     "ceo.label": "CEO message",
     "ceo.quote": "“Translating how living things survive into materials. That is what we offer industry.”",
-    "ceo.p1": "NucleoEX is a startup founded through a lab spin-off, based on technology developed at the bio-nano materials research lab at Sungkyunkwan University.",
+    "ceo.p1": "NucleoEX is a startup founded through a lab spin-off, based on technology developed at the Biological & Nanoscale Materials Lab at Sungkyunkwan University.",
     "ceo.p2": "Using bio-derived substances that play a central role in how living organisms survive, we aim to contribute to human progress through innovative bio-nano convergence materials and future-oriented eco-friendly materials.",
     "ceo.p3": "As ESG grows ever more important worldwide, we will build a company that always puts people and the environment first.",
     "ceo.name": "Jung Heon Lee",
