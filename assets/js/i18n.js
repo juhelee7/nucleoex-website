@@ -165,7 +165,7 @@ window.NUCLEOEX_I18N = {
     "about.f4v": "Venture certification (first certified 2023.11, renewed 2026.11) · Root technology enterprise certification (2024.01) · Deep-Tech TIPS (2025) · SKKU Business Incubator resident",
 
     "tech.label": "Technology",
-    "tech.title": "Built on eco-friendly bio-based flame-retardant solutions,<br>expanding into new materials",
+    "tech.title": "Bio-based flame-retardant solutions,<br>expanding into new materials",
     "tech.desc": "Our core business is an eco-friendly flame-retardant solution: a small amount of bio-derived additive combined with a halogen-free (phosphorus-based) flame-retardant system to maximize flame performance and reduce toxic smoke. We are widening its use across automotive, battery, industrial materials, and defense, and extending the same molecular design principle into diagnostic sensors and functional composites.",
     "tech.leadTag": "Core business",
     "tech.pipeline": "Expansion pipeline",
