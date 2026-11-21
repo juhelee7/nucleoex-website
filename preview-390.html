@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>390 preview</title>
+<style>
+  html, body { margin: 0; background: #14161c; }
+  .wrap { width: 390px; margin: 0 auto; }
+  iframe { width: 390px; height: 960px; border: 0; display: block; background: #fff; }
+</style>
+</head>
+<body>
+<div class="wrap"><iframe id="f" title="preview"></iframe></div>
+<script>
+  var p = new URLSearchParams(location.search);
+  var lang = p.get('lang') || 'ko';
+  var y = parseInt(p.get('y') || '0', 10);
+  var h = parseInt(p.get('h') || '960', 10);
+  var f = document.getElementById('f');
+  f.style.height = h + 'px';
+  f.src = 'https://juhelee7.github.io/nucleoex-website/?v=2026112130' + (lang === 'en' ? '&lang=en' : '') + '#milestones';
+  f.addEventListener('load', function () {
+    try {
+      var el = f.contentDocument.getElementById('milestones');
+      f.contentWindow.scrollTo(0, el.offsetTop + y);
+    } catch (e) {}
+  });
+</script>
+</body>
+</html>
