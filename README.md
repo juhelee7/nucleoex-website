@@ -38,6 +38,11 @@ assets/img/                로고, 히어로 배경, 기술 이미지, 파비콘
 | `assets/img/og-image.jpg` | 카카오톡·SNS 링크 미리보기 | 1200×630 |
 | `assets/img/favicon-*.png` | 브라우저 탭 아이콘 | 64 / 32 / 180px |
 
+## CSS/JS를 고친 뒤 (캐시 주의)
+
+`index.html`의 `main.css?v=2026112201`, `i18n.js?v=...`, `main.js?v=...` 끝의 숫자를 한 단계 올려 주세요.
+GitHub Pages와 방문자 브라우저가 예전 파일을 계속 쓰는 것을 막습니다.
+
 ## 배포
 
 `main` 브랜치에 커밋·푸시하면 GitHub Pages(브랜치: `main`, 폴더: `/`)가 자동으로 다시 배포합니다.
@@ -45,6 +50,16 @@ assets/img/                로고, 히어로 배경, 기술 이미지, 파비콘
 ```bash
 git add -A && git commit -m "내용 수정" && git push origin main
 ```
+
+## 커스텀 도메인(www.nucleoex.com)으로 옮길 때
+
+1. DNS 관리(도메인 등록업체)에서 아래 레코드를 추가합니다.
+   - `A` `@` → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
+   - `CNAME` `www` → `juhelee7.github.io`
+2. 저장소 Settings → Pages → Custom domain에 `www.nucleoex.com` 입력 후 Save, `Enforce HTTPS` 체크.
+3. 도메인이 살아나면 `index.html`의 `canonical`·`og:url`·`og:image`, `sitemap.xml`, `robots.txt`의
+   `https://juhelee7.github.io/nucleoex-website/` 주소를 `https://www.nucleoex.com/`으로 바꿉니다.
+4. `404.html`의 `/nucleoex-website/assets/...` 경로도 `/assets/...`로 바꿉니다(저장소 하위 경로용으로 작성되어 있음).
 
 ## 공개 범위 원칙
 
