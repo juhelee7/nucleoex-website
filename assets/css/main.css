@@ -554,10 +554,9 @@ ul, ol { list-style: none; }
   grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
   gap: clamp(28px, 4vw, 60px);
   align-items: center;
-  margin-top: 20px;
-  padding: clamp(28px, 4vw, 52px);
-  border: 1px solid var(--line-dark);
-  background: #111B31;
+  margin-top: clamp(40px, 5vw, 64px);
+  padding: clamp(28px, 4vw, 44px) 0 0;
+  border-top: 1px solid var(--line-dark);
 }
 .feature-label {
   font-size: 13px;
