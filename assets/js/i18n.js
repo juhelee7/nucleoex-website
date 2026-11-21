@@ -18,7 +18,7 @@ window.NUCLEOEX_I18N = {
 
     "hero.eyebrow": "성균관대학교 실험실 창업 · 딥테크 소재 기업",
     "hero.title": "생물 유래 소재로<br>산업의 내일을 설계합니다",
-    "hero.lede": "(주)뉴클레오엑스는 성균관대학교 바이오-나노 소재 연구실의 원천기술을 기반으로 설립된 딥테크 소재 기업입니다. 소량의 생물 유래 바이오 첨가제를 할로겐-프리 난연 시스템에 결합해 난연 성능과 유독가스 저감 효과를 끌어올리는 친환경 난연 솔루션을 주력 사업으로, 자동차와 배터리, 산업용 소재, 방산 분야로 적용을 넓히고 있습니다.",
+    "hero.lede": "(주)뉴클레오엑스는 성균관대학교 바이오-나노 소재 연구실의 원천기술을 기반으로 설립된 딥테크 소재 기업입니다. 생물 유래 소재로 난연 성능과 안전성을 함께 높이는 친환경 난연 솔루션을 주력 사업으로 합니다.",
     "hero.cta1": "핵심 기술 살펴보기",
     "hero.cta2": "IR · 파트너십 문의",
 
@@ -38,7 +38,7 @@ window.NUCLEOEX_I18N = {
 
     "tech.label": "핵심 기술",
     "tech.title": "친환경 바이오 난연 솔루션을 중심으로,<br>소재 플랫폼을 확장합니다",
-    "tech.desc": "뉴클레오엑스의 주력 사업은 할로겐-프리(인계) 난연 시스템에 소량의 생물 유래 바이오 첨가제를 결합해 난연 성능과 유독가스 저감 효과를 극대화하는 친환경 난연 솔루션입니다. 자동차와 배터리, 산업용 소재, 방산 분야로 적용을 넓히고, 같은 분자 설계 원리를 진단 센서와 기능성 복합소재로 확장해 나갑니다.",
+    "tech.desc": "자동차와 배터리, 산업용 소재, 방산 분야까지 친환경 난연 솔루션의 적용을 넓히고, 같은 분자 설계 원리를 진단 센서와 기능성 복합소재로 확장해 나갑니다.",
     "tech.leadTag": "주력 사업",
     "tech.pipeline": "확장 파이프라인",
     "tech.pipelineNote": "난연소재에서 검증한 분자 설계 원리를 다음 소재군으로 확장해 개발합니다.",
@@ -146,7 +146,7 @@ window.NUCLEOEX_I18N = {
 
     "hero.eyebrow": "A deep-tech materials company spun out of Sungkyunkwan University (SKKU)",
     "hero.title": "Tomorrow's materials,<br>designed from biology",
-    "hero.lede": "NucleoEX is a deep-tech materials company built on original technology from the Biological & Nanoscale Materials Lab at SKKU. Our core business is an eco-friendly flame-retardant solution that pairs a small amount of bio-derived additive with a halogen-free flame-retardant system to raise flame performance and cut toxic smoke, with applications expanding across automotive, battery, industrial materials, and defense.",
+    "hero.lede": "NucleoEX is a deep-tech materials company built on original technology from the Biological & Nanoscale Materials Lab at SKKU. Our core business is an eco-friendly flame-retardant solution that raises both flame performance and safety through bio-derived materials.",
     "hero.cta1": "Explore our technology",
     "hero.cta2": "IR & Partnership",
 
@@ -166,7 +166,7 @@ window.NUCLEOEX_I18N = {
 
     "tech.label": "Technology",
     "tech.title": "Bio-based flame-retardant solutions,<br>expanding into new materials",
-    "tech.desc": "Our core business is an eco-friendly flame-retardant solution: a small amount of bio-derived additive combined with a halogen-free (phosphorus-based) flame-retardant system to maximize flame performance and reduce toxic smoke. We are widening its use across automotive, battery, industrial materials, and defense, and extending the same molecular design principle into diagnostic sensors and functional composites.",
+    "tech.desc": "We are expanding our eco-friendly flame-retardant solutions across automotive, battery, industrial materials, and defense, while extending the same molecular design principle into diagnostic sensors and functional composites.",
     "tech.leadTag": "Core business",
     "tech.pipeline": "Expansion pipeline",
     "tech.pipelineNote": "Further materials built on the molecular design principle proven in our flame retardants.",
