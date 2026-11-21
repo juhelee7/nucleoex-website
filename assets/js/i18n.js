@@ -223,7 +223,7 @@ window.NUCLEOEX_I18N = {
     "mile.y4t": "Venture company certification · SKKU incubator resident",
     "mile.y4d": "Recognized for both technology and business potential, we obtained venture company certification and continue commercializing from the SKKU Business Incubator.",
     "mile.c1t": "Deep-Tech TIPS",
-    "mile.c1d": "Ministry of SMEs and Startups program (2025)",
+    "mile.c1d": "Selected by the Ministry of SMEs and Startups (2025)",
     "mile.c2t": "Institutional investment",
     "mile.c2d": "Venture fund investment secured (2025)",
     "mile.c3t": "Venture Company",
