@@ -17,10 +17,20 @@
     return "ko";
   }
 
+  function setMeta(selector, value) {
+    if (!value) return;
+    var el = document.querySelector(selector);
+    if (el) el.setAttribute("content", value);
+  }
+
+  function pageUrl(lang) {
+    return "https://juhelee7.github.io/nucleoex-website/" + (lang === "en" ? "?lang=en" : "");
+  }
+
   function applyLang(lang, persist) {
     if (!DICT[lang]) lang = "ko";
     currentLang = lang;
-    var t = DICT[lang];
+    var t = DICT[lang] || {};
 
     document.querySelectorAll("[data-i18n]").forEach(function (el) {
       var key = el.getAttribute("data-i18n");
@@ -38,19 +48,36 @@
       var v = t[el.getAttribute("data-i18n-alt")];
       if (v) el.setAttribute("alt", v);
     });
+    document.querySelectorAll("[data-i18n-title]").forEach(function (el) {
+      var v = t[el.getAttribute("data-i18n-title")];
+      if (v) el.setAttribute("title", v);
+    });
     document.querySelectorAll("[data-i18n-aria]").forEach(function (el) {
       var v = t[el.getAttribute("data-i18n-aria")];
       if (v) el.setAttribute("aria-label", v);
     });
 
     document.documentElement.setAttribute("lang", lang);
+    document.documentElement.setAttribute("data-lang", lang);
     if (t["meta.title"]) document.title = t["meta.title"];
-    var desc = document.querySelector('meta[name="description"]');
-    if (desc && t["meta.desc"]) desc.setAttribute("content", t["meta.desc"]);
-    var og = document.querySelector('meta[property="og:title"]');
-    if (og && t["meta.title"]) og.setAttribute("content", t["meta.title"]);
+    setMeta('meta[name="description"]', t["meta.desc"]);
+    setMeta('meta[property="og:title"]', t["meta.title"]);
+    setMeta('meta[property="og:description"]', t["meta.desc"]);
+    setMeta('meta[property="og:url"]', pageUrl(lang));
+    setMeta('meta[property="og:locale"]', lang === "en" ? "en_US" : "ko_KR");
+    setMeta('meta[name="twitter:title"]', t["meta.title"]);
+    setMeta('meta[name="twitter:description"]', t["meta.desc"]);
 
-    document.querySelectorAll(".lang-switch button").forEach(function (b) {
+    var map = document.getElementById("mapFrame");
+    if (map) {
+      var base = map.getAttribute("data-map-src");
+      if (base) {
+        var wanted = base.replace(/hl=[a-z]{2}/, "hl=" + lang);
+        if (map.getAttribute("src") !== wanted) map.setAttribute("src", wanted);
+      }
+    }
+
+    document.querySelectorAll("[data-lang]").forEach(function (b) {
       var on = b.getAttribute("data-lang") === lang;
       b.classList.toggle("is-active", on);
       b.setAttribute("aria-pressed", on ? "true" : "false");
@@ -72,12 +99,16 @@
     }
   }
 
-  document.querySelectorAll(".lang-switch button").forEach(function (btn) {
-    btn.addEventListener("click", function () {
-      var lang = btn.getAttribute("data-lang");
-      if (lang === currentLang) return;
-      applyLang(lang, true);
-    });
+  /* Delegated on the document so the switch also works from the mobile drawer. */
+  document.addEventListener("click", function (e) {
+    var hit = e.target && e.target.closest ? e.target.closest("[data-lang]") : null;
+    if (!hit) return;
+    var lang = hit.getAttribute("data-lang");
+    if (!lang) return;
+    e.preventDefault();
+    if (lang !== currentLang) applyLang(lang, true);
+    var m = document.getElementById("mobileMenu");
+    if (m && m.classList.contains("is-open")) closeMenu();
   });
 
   /* ---------------- Header ---------------- */
