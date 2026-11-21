@@ -691,6 +691,37 @@ ul, ol { list-style: none; }
   word-break: keep-all;
 }
 
+/* dated fact rows inside one year block */
+.mile-rows {
+  display: grid;
+  gap: 10px;
+}
+.mile-rows li {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+}
+.mile-rows .when {
+  flex: 0 0 72px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--muted);
+  letter-spacing: 0;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.mile-rows .what {
+  font-size: 15px;
+  line-height: 1.62;
+  color: var(--ink-soft);
+  word-break: keep-all;
+  max-width: 34em;
+}
+.mile-rows .is-key .what {
+  font-weight: 700;
+  color: var(--ink);
+}
+
 .cred-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -701,6 +732,14 @@ ul, ol { list-style: none; }
 .cred {
   padding: 28px 26px;
   background: var(--white);
+}
+.cred-cat {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  color: var(--brand);
 }
 .cred h3 {
   font-size: 15.5px;
@@ -964,6 +1003,10 @@ ul, ol { list-style: none; }
   .timeline li > div { padding-left: 0; }
   .timeline li > div::before { left: -22px; top: 9px; margin-left: -3px; }
   .timeline .year { padding-top: 0; }
+  .mile-rows { gap: 9px; }
+  .mile-rows li { gap: 10px; }
+  .mile-rows .when { flex: 0 0 62px; font-size: 12px; }
+  .mile-rows .what { font-size: 14.5px; }
   .cred-grid { grid-template-columns: 1fr; }
   .contact-list li { grid-template-columns: 1fr; gap: 4px; }
   .contact-cta .btn { flex: 1 1 auto; }

@@ -1,6 +1,6 @@
-# NucleoEX Website — (주)뉴클레오엑스
+# NucleoEX Website · (주)뉴클레오엑스
 
-성균관대학교 바이오-나노 소재 연구실(BNML) 기반 딥테크 소재 기업 **(주)뉴클레오엑스**의 공식 홈페이지입니다.
+성균관대학교 바이오-나노 소재 연구실 기반 딥테크 소재 기업 **(주)뉴클레오엑스**의 공식 홈페이지입니다.
 빌드 도구 없이 동작하는 정적 사이트로, GitHub Pages에서 바로 서비스됩니다.
 
 - 라이브(예정/운영): https://juhelee7.github.io/nucleoex-website/
@@ -32,7 +32,7 @@ assets/img/                로고, 히어로 배경, 기술 이미지, 파비콘
 |---|---|---|
 | `assets/img/logo-white.png` | 헤더·푸터 (어두운 배경용 흰색 로고) | 가로 2000px, 투명 PNG |
 | `assets/img/logo-color.png` | 문서·SNS 공유용 컬러 로고 | 가로 2000px |
-| `assets/img/hero-mesh.jpg` | (현재 미사용 — 첫 화면은 단색 배경) | 1920×1074 |
+| `assets/img/hero-mesh.jpg` | (현재 미사용, 첫 화면은 단색 배경) | 1920×1074 |
 | `assets/img/tech-flame-1.jpg` | 친환경 난연소재 카드 | 1200px 폭 |
 | `assets/img/tech-foam.jpg` | 바이오 난연 블록 이미지 | 1200px 폭 |
 | `assets/img/og-image.jpg` | 카카오톡·SNS 링크 미리보기 | 1200×630 |

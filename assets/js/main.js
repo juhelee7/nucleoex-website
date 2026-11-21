@@ -1,4 +1,4 @@
-/* NucleoEX — site behaviour */
+/* NucleoEX · site behaviour */
 (function () {
   "use strict";
 
