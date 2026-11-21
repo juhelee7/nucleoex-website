@@ -34,13 +34,13 @@ assets/img/                로고, 히어로 배경, 기술 이미지, 파비콘
 | `assets/img/logo-color.png` | 문서·SNS 공유용 컬러 로고 | 가로 2000px |
 | `assets/img/hero-mesh.jpg` | (현재 미사용 — 첫 화면은 단색 배경) | 1920×1074 |
 | `assets/img/tech-flame-1.jpg` | 친환경 난연소재 카드 | 1200px 폭 |
-| `assets/img/tech-foam.jpg` | ATP 플랫폼 이미지 | 1200px 폭 |
+| `assets/img/tech-foam.jpg` | 바이오 난연 블록 이미지 | 1200px 폭 |
 | `assets/img/og-image.jpg` | 카카오톡·SNS 링크 미리보기 | 1200×630 |
 | `assets/img/favicon-*.png` | 브라우저 탭 아이콘 | 64 / 32 / 180px |
 
 ## CSS/JS를 고친 뒤 (캐시 주의)
 
-`index.html`의 `main.css?v=2026112122`, `i18n.js?v=...`, `main.js?v=...` 끝의 숫자를 한 단계 올려 주세요.
+`index.html`의 `main.css?v=2026112123`, `i18n.js?v=...`, `main.js?v=...` 끝의 숫자를 한 단계 올려 주세요.
 GitHub Pages와 방문자 브라우저가 예전 파일을 계속 쓰는 것을 막습니다.
 
 ## 배포
