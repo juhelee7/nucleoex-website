@@ -143,7 +143,7 @@ window.NUCLEOEX_I18N = {
     "nav.cta": "IR Contact",
 
     "hero.eyebrow": "Sungkyunkwan University Deep-Tech Spin-off",
-    "hero.title": "Engineering tomorrow's materials<br><em>from biological molecules</em>",
+    "hero.title": "Tomorrow's materials,<br><em>designed from biology</em>",
     "hero.lede": "NucleoEX is a deep-tech materials company built on original technology from the Biological & Nanoscale Materials Lab (BNML) at Sungkyunkwan University. We convert the intrinsic functions of bio-derived molecules into industrial materials: eco-friendly flame retardants, diagnostic sensors, and functional composites.",
     "hero.cta1": "Explore our technology",
     "hero.cta2": "IR & Partnership",
