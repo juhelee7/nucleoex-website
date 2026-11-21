@@ -652,14 +652,14 @@ ul, ol { list-style: none; }
   width: 1px;
   background: var(--line);
 }
-.timeline li {
+.timeline > li {
   position: relative;
   display: grid;
   grid-template-columns: 76px 1fr;
   gap: 32px;
   padding-bottom: 38px;
 }
-.timeline li:last-child { padding-bottom: 0; }
+.timeline > li:last-child { padding-bottom: 0; }
 .timeline .year {
   font-size: 15px;
   font-weight: 700;
@@ -668,8 +668,8 @@ ul, ol { list-style: none; }
   padding-top: 2px;
   font-variant-numeric: tabular-nums;
 }
-.timeline li > div { position: relative; padding-left: 32px; }
-.timeline li > div::before {
+.timeline > li > div { position: relative; padding-left: 32px; }
+.timeline > li > div::before {
   content: "";
   position: absolute;
   left: -32px; top: 10px;
@@ -697,12 +697,13 @@ ul, ol { list-style: none; }
   gap: 10px;
 }
 .mile-rows li {
-  display: flex;
-  align-items: baseline;
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
   gap: 14px;
+  align-items: baseline;
+  padding-bottom: 0;
 }
 .mile-rows .when {
-  flex: 0 0 72px;
   font-size: 12.5px;
   font-weight: 600;
   color: var(--muted);
@@ -711,6 +712,7 @@ ul, ol { list-style: none; }
   white-space: nowrap;
 }
 .mile-rows .what {
+  grid-column: 2;
   font-size: 15px;
   line-height: 1.62;
   color: var(--ink-soft);
@@ -965,13 +967,13 @@ ul, ol { list-style: none; }
   .hero-cta .btn { width: 100%; }
   .section { padding: 68px 0; }
   .timeline::before { left: 0; }
-  .timeline li { grid-template-columns: 1fr; gap: 6px; padding-left: 22px; padding-bottom: 32px; }
-  .timeline li > div { padding-left: 0; }
-  .timeline li > div::before { left: -22px; top: 9px; margin-left: -3px; }
+  .timeline > li { grid-template-columns: 1fr; gap: 6px; padding-left: 22px; padding-bottom: 32px; }
+  .timeline > li > div { padding-left: 0; }
+  .timeline > li > div::before { left: -22px; top: 9px; margin-left: -3px; }
   .timeline .year { padding-top: 0; }
   .mile-rows { gap: 9px; }
-  .mile-rows li { gap: 10px; }
-  .mile-rows .when { flex: 0 0 62px; font-size: 12px; }
+  .mile-rows li { grid-template-columns: 58px minmax(0, 1fr); gap: 10px; }
+  .mile-rows .when { font-size: 12px; }
   .mile-rows .what { font-size: 14.5px; }
   .contact-list li { grid-template-columns: 1fr; gap: 4px; }
   .contact-cta .btn { flex: 1 1 auto; }
