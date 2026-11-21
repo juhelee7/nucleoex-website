@@ -84,6 +84,7 @@ window.NUCLEOEX_I18N = {
 
     "mile.label": "연혁",
     "mile.title": "연혁 · 수상 · 인증",
+    "mile.p0": "성균관대학교 바이오-나노 소재 연구실 설립",
     "mile.p1": "바이오 기반 친환경 난연소재 세계 최초 보고",
     "mile.p2": "생물 유래 난연소재 원천기술·특허 확보",
     "mile.t22d": "성균관대학교 창업보육센터 입주",
@@ -230,6 +231,7 @@ window.NUCLEOEX_I18N = {
 
     "mile.label": "Milestones",
     "mile.title": "Milestones, Awards &amp; Credentials",
+    "mile.p0": "Biological & Nanoscale Materials Lab founded at Sungkyunkwan University",
     "mile.p1": "World's first report of a bio-based eco-friendly flame retardant",
     "mile.p2": "Core technology and patents secured for bio-derived flame retardants",
     "mile.t22d": "Moved into the SKKU Business Incubator",
