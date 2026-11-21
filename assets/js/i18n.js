@@ -12,6 +12,9 @@ window.NUCLEOEX_I18N = {
     "nav.ceo": "CEO 인사",
     "nav.contact": "문의",
     "nav.cta": "IR 문의",
+    "nav.ariaMain": "주요 메뉴",
+    "nav.ariaMobile": "모바일 메뉴",
+    "nav.ariaFooter": "하단 메뉴",
 
     "hero.eyebrow": "Sungkyunkwan University Deep-Tech Spin-off",
     "hero.title": "생물 유래 소재로<br><em>산업의 내일</em>을 설계합니다",
@@ -68,6 +71,8 @@ window.NUCLEOEX_I18N = {
     "tech.f2": "자연 소화 — 불꽃을 제거하면 연소가 스스로 멈추는 특성",
     "tech.f3": "유독가스 저감 — 연소 시 유해 연기 발생 억제",
     "tech.fCap": "난연 우레탄 폼 시제품 — 연소 시험",
+    "tech.t1alt": "난연 성능 시험(수직 연소 시험) 장면",
+    "tech.fAlt": "난연 처리한 폴리우레탄 폼의 연소 시험 모습",
 
     "why.label": "WHY NUCLEOEX",
     "why.title": "왜 뉴클레오엑스인가",
@@ -141,6 +146,9 @@ window.NUCLEOEX_I18N = {
     "nav.ceo": "CEO Message",
     "nav.contact": "Contact",
     "nav.cta": "IR Contact",
+    "nav.ariaMain": "Main menu",
+    "nav.ariaMobile": "Mobile menu",
+    "nav.ariaFooter": "Footer menu",
 
     "hero.eyebrow": "Sungkyunkwan University Deep-Tech Spin-off",
     "hero.title": "Tomorrow's materials,<br><em>designed from biology</em>",
@@ -197,6 +205,8 @@ window.NUCLEOEX_I18N = {
     "tech.f2": "Self-extinguishing — combustion stops on its own once the flame is removed",
     "tech.f3": "Lower toxic smoke — suppresses hazardous fumes during combustion",
     "tech.fCap": "Flame-retardant polyurethane foam prototype — burn test",
+    "tech.t1alt": "Vertical burn test of a flame-retardant specimen",
+    "tech.fAlt": "Burn test of a flame-retardant polyurethane foam",
 
     "why.label": "WHY NUCLEOEX",
     "why.title": "Why NucleoEX",

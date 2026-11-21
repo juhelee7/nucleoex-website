@@ -34,6 +34,15 @@
       }
     });
 
+    document.querySelectorAll("[data-i18n-alt]").forEach(function (el) {
+      var v = t[el.getAttribute("data-i18n-alt")];
+      if (v) el.setAttribute("alt", v);
+    });
+    document.querySelectorAll("[data-i18n-aria]").forEach(function (el) {
+      var v = t[el.getAttribute("data-i18n-aria")];
+      if (v) el.setAttribute("aria-label", v);
+    });
+
     document.documentElement.setAttribute("lang", lang);
     if (t["meta.title"]) document.title = t["meta.title"];
     var desc = document.querySelector('meta[name="description"]');
