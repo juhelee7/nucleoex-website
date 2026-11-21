@@ -12,7 +12,8 @@
   var p = new URLSearchParams(location.search);
   var s = p.get("s"), lang = p.get("lang"), h = p.get("h");
   var src = "../index.html";
-  if (lang) src += "?lang=" + lang;
+  src += "?cb=" + Date.now();
+  if (lang) src += "&lang=" + lang;
   if (s) src += "#" + s;
   var f = document.getElementById("f");
   if (h) f.style.height = h + "px";
