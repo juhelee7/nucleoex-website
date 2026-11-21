@@ -18,7 +18,7 @@ window.NUCLEOEX_I18N = {
 
     "hero.eyebrow": "성균관대학교 실험실 창업 · 딥테크 소재 기업",
     "hero.title": "생물 유래 소재로<br>산업의 내일을 설계합니다",
-    "hero.lede": "(주)뉴클레오엑스는 성균관대학교 바이오-나노 소재 연구실(BNML)의 원천기술을 기반으로 설립된 딥테크 소재 기업입니다. 생물 유래 분자로 만든 친환경 바이오 난연제를 주력 사업으로, 자동차와 배터리, 산업용 소재에 적용을 넓히고 있습니다.",
+    "hero.lede": "(주)뉴클레오엑스는 성균관대학교 바이오-나노 소재 연구실(BNML)의 원천기술을 기반으로 설립된 딥테크 소재 기업입니다. 생물 유래 분자로 만든 친환경 바이오 난연제를 주력 사업으로, 자동차와 배터리, 산업용 소재, 방산 분야로 적용을 넓히고 있습니다.",
     "hero.cta1": "핵심 기술 살펴보기",
     "hero.cta2": "IR · 파트너십 문의",
 
@@ -38,7 +38,7 @@ window.NUCLEOEX_I18N = {
 
     "tech.label": "핵심 기술",
     "tech.title": "친환경 바이오 난연소재를 중심으로,<br>소재 플랫폼을 확장합니다",
-    "tech.desc": "뉴클레오엑스의 주력 사업은 생물 유래 분자로 만든 친환경 바이오 난연제입니다. 자동차와 배터리, 산업용 소재로 적용을 넓히고, 같은 분자 설계 원리를 진단 센서와 기능성 복합소재로 확장해 나갑니다.",
+    "tech.desc": "뉴클레오엑스의 주력 사업은 생물 유래 분자로 만든 친환경 바이오 난연제입니다. 자동차와 배터리, 산업용 소재, 방산 분야로 적용을 넓히고, 같은 분자 설계 원리를 진단 센서와 기능성 복합소재로 확장해 나갑니다.",
     "tech.leadTag": "주력 사업",
     "tech.pipeline": "확장 파이프라인",
     "tech.pipelineNote": "난연소재에서 검증한 분자 설계 원리를 다음 소재군으로 확장해 개발합니다.",
@@ -49,6 +49,7 @@ window.NUCLEOEX_I18N = {
     "tech.t1c3": "산업용 섬유",
     "tech.t1c4": "PU 폼 단열재",
     "tech.t1c5": "전자·전기 부품",
+    "tech.t1c6": "방산 소재",
     "tech.t2title": "바이오 · 환경 진단용 센서",
     "tech.t2desc": "생체분자와 나노구조체의 선택적 반응을 이용해 바이오 진단 및 환경 유해물질을 고감도로 검지하는 센서 소재·플랫폼입니다. 색 변화 기반의 육안 판독과 정량 검지를 함께 구현합니다.",
     "tech.t2c1": "바이오 진단",
@@ -149,7 +150,7 @@ window.NUCLEOEX_I18N = {
 
     "hero.eyebrow": "A deep-tech materials company spun out of Sungkyunkwan University",
     "hero.title": "Tomorrow's materials,<br>designed from biology",
-    "hero.lede": "NucleoEX is a deep-tech materials company built on original technology from the Biological & Nanoscale Materials Lab (BNML) at Sungkyunkwan University. Our core business is an eco-friendly bio-based flame retardant made from bio-derived molecules, with applications expanding across automotive, battery, and industrial materials.",
+    "hero.lede": "NucleoEX is a deep-tech materials company built on original technology from the Biological & Nanoscale Materials Lab (BNML) at Sungkyunkwan University. Our core business is an eco-friendly bio-based flame retardant made from bio-derived molecules, with applications expanding across automotive, battery, industrial materials, and defense.",
     "hero.cta1": "Explore our technology",
     "hero.cta2": "IR & Partnership",
 
@@ -169,7 +170,7 @@ window.NUCLEOEX_I18N = {
 
     "tech.label": "Technology",
     "tech.title": "Built on eco-friendly bio-based flame retardants,<br>expanding into new materials",
-    "tech.desc": "Our core business is an eco-friendly, bio-based flame retardant made from bio-derived molecules. We are widening its use across automotive, battery, and industrial materials, and extending the same molecular design principle into diagnostic sensors and functional composites.",
+    "tech.desc": "Our core business is an eco-friendly, bio-based flame retardant made from bio-derived molecules. We are widening its use across automotive, battery, industrial materials, and defense, and extending the same molecular design principle into diagnostic sensors and functional composites.",
     "tech.leadTag": "Core business",
     "tech.pipeline": "Expansion pipeline",
     "tech.pipelineNote": "Further materials built on the molecular design principle proven in our flame retardants.",
@@ -180,6 +181,7 @@ window.NUCLEOEX_I18N = {
     "tech.t1c3": "Industrial textiles",
     "tech.t1c4": "PU foam insulation",
     "tech.t1c5": "Electronics",
+    "tech.t1c6": "Defense",
     "tech.t2title": "Bio &amp; Environmental Diagnostic Sensors",
     "tech.t2desc": "Sensor materials and platforms that detect biomarkers and environmental hazards with high sensitivity, using the selective reactions of biomolecules and nanostructures. They support both visual, color-change readout and quantitative measurement.",
     "tech.t2c1": "Bio diagnostics",
