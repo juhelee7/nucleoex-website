@@ -1,0 +1,195 @@
+/* ==========================================================================
+   NucleoEX · color preview 2 — 木(딥 포레스트 그린) 바탕 + 火(테라코타/코퍼) 포인트
+   Loaded only by preview-2.html, after main.css. index.html / main.css untouched.
+   ========================================================================== */
+
+:root {
+  /* base: deep forest green (木) */
+  --navy-950: #071410;
+  --navy-900: #0C1E17;
+  --navy-800: #132B22;
+  --navy-700: #1C3D30;
+
+  /* warm terracotta / copper accents (火) */
+  --brand: #B84F2D;
+  --brand-600: #9C3F22;
+  --brand-300: #E8A48E;
+  --brand-100: #F7E2D8;
+  --copper-600: #B84F2D;
+  --copper-500: #D96B43;
+  --copper-400: #E87A54;
+
+  /* warm ivory paper */
+  --paper: #F6F7F4;
+  --paper-2: #ECEDE6;
+  --ink: #161E19;
+  --ink-soft: #3A463F;
+  --muted: #6A766E;
+  --line: rgba(22, 30, 25, .14);
+  --line-strong: rgba(22, 30, 25, .27);
+  --line-dark: rgba(246, 247, 244, .15);
+  --line-dark-soft: rgba(246, 247, 244, .07);
+  --ivory: #F6F7F4;
+}
+
+/* 木 → 火 accent rule along the very top */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  z-index: 120;
+  pointer-events: none;
+  background: linear-gradient(90deg, #1C3D30 0%, #2F5844 26%, #B84F2D 58%, #E87A54 100%);
+}
+
+::selection { background: var(--copper-600); color: var(--ivory); }
+:focus-visible { outline-color: var(--brand-300); }
+
+/* ---------- Hero ---------- */
+.hero { background: var(--navy-950); }
+.hero-bg {
+  background:
+    radial-gradient(52% 48% at 86% 8%, rgba(217, 107, 67, .24), transparent 62%),
+    radial-gradient(50% 52% at 0% 96%, rgba(28, 61, 48, .55), transparent 72%),
+    radial-gradient(60% 60% at 46% 44%, rgba(184, 79, 45, .07), transparent 74%);
+}
+.hero .eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 7px; height: 7px;
+  margin-right: 11px;
+  position: relative;
+  top: -1px;
+  vertical-align: middle;
+  background: var(--copper-500);
+}
+
+/* ---------- Buttons ---------- */
+.btn-primary {
+  background: var(--copper-500);
+  border-color: var(--copper-500);
+  color: #FFF8F2;
+  box-shadow: 0 14px 34px -18px rgba(217, 107, 67, .9);
+}
+.btn-primary:hover {
+  background: var(--copper-600);
+  border-color: var(--copper-600);
+  color: #FFF8F2;
+}
+.section-light .btn-primary,
+.section-tint .btn-primary {
+  background: var(--copper-500);
+  border-color: var(--copper-500);
+  color: #FFF8F2;
+  box-shadow: none;
+}
+.section-light .btn-primary:hover,
+.section-tint .btn-primary:hover {
+  background: var(--copper-600);
+  border-color: var(--copper-600);
+  color: #FFF8F2;
+}
+.btn-outline:hover {
+  background: var(--copper-600);
+  border-color: var(--copper-600);
+  color: #FFF8F2;
+}
+
+/* ---------- Section labels ---------- */
+.section-dark .section-label { color: var(--brand-300); }
+.section-dark .section-desc { color: rgba(246, 247, 244, .62); }
+
+/* ---------- Technology ---------- */
+.tech-lead {
+  background: #10241C;
+  border-color: rgba(232, 122, 84, .18);
+}
+.tech-lead-media { border-right-color: rgba(232, 122, 84, .18); }
+.tech-lead-tag { color: var(--brand-300); }
+.feature-label { color: var(--brand-300); }
+.chips li {
+  border-color: rgba(232, 122, 84, .26);
+  color: rgba(246, 241, 234, .74);
+}
+.pipeline-media { opacity: .85; }
+/* inline SVG accents: indigo → copper/ivory */
+#gSensor stop:first-child { stop-color: #F6E3D8; }
+#gSensor stop:last-child { stop-color: #B84F2D; }
+#gComp stop:first-child { stop-color: #E8B49C; }
+#gComp stop:last-child { stop-color: #8E3A1E; }
+.pipeline-media [fill="#A9ACEA"] { fill: #E8B49C; }
+.pipeline-media [fill="#B4B7F0"] { fill: #D96B43; }
+.pipeline-media [stroke="#A9ACEA"] { stroke: #E8B49C; }
+
+/* ---------- Milestones ---------- */
+.timeline::before {
+  background: linear-gradient(180deg, rgba(184, 79, 45, .42), rgba(232, 122, 84, .30));
+}
+.timeline > li::before { background: var(--copper-500); }
+.timeline > li:has(.is-key)::before {
+  box-shadow: 0 0 0 4px rgba(217, 107, 67, .16);
+}
+.timeline .year { color: var(--copper-600); }
+
+/* ---------- CEO ---------- */
+.ceo blockquote { border-left-color: var(--copper-400); }
+
+/* ---------- Contact ---------- */
+.copy-btn { border-color: rgba(184, 79, 45, .34); }
+.copy-btn:hover,
+.copy-btn.is-done { background: var(--copper-600); border-color: var(--copper-600); }
+.ci-body a:hover { color: var(--copper-600); }
+.contact-map iframe { filter: grayscale(.25) sepia(.14) contrast(1.02); }
+.map-note { background: var(--paper); }
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background: linear-gradient(180deg, #0A1A14 0%, #06110D 70%);
+  border-top-color: rgba(232, 122, 84, .18);
+}
+.toast { background: var(--navy-800); }
+
+/* ---------- Preview switcher ---------- */
+.preview-bar {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 110;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px 8px 8px;
+  background: rgba(5, 14, 10, .88);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(246, 247, 244, .18);
+  color: var(--ivory);
+  font-size: 12.5px;
+  line-height: 1;
+  letter-spacing: -.01em;
+  box-shadow: 0 16px 40px -20px rgba(0, 0, 0, .95);
+}
+.preview-bar__tag {
+  padding: 5px 8px;
+  background: var(--copper-500);
+  color: #FFF8F2;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: .04em;
+}
+.preview-bar__label { color: rgba(246, 247, 244, .72); }
+.preview-bar a {
+  color: var(--ivory);
+  font-weight: 600;
+  white-space: nowrap;
+  padding-bottom: 1px;
+  border-bottom: 1px solid rgba(246, 247, 244, .4);
+  transition: color .2s, border-color .2s;
+}
+.preview-bar a:hover { color: var(--copper-400); border-color: var(--copper-400); }
+
+@media (max-width: 640px) {
+  .preview-bar { right: 12px; bottom: 12px; font-size: 11.5px; gap: 8px; }
+  .preview-bar__label { display: none; }
+}
