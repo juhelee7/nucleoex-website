@@ -24,7 +24,7 @@
   --paper-2: #ECEDE6;
   --ink: #161E19;
   --ink-soft: #3A463F;
-  --muted: #6A766E;
+  --muted: #626D66;
   --line: rgba(22, 30, 25, .14);
   --line-strong: rgba(22, 30, 25, .27);
   --line-dark: rgba(246, 247, 244, .15);
@@ -67,27 +67,28 @@ body::before {
 
 /* ---------- Buttons ---------- */
 .btn-primary {
-  background: var(--copper-500);
-  border-color: var(--copper-500);
+  /* one step deeper than the copper accent so the ivory label stays at 4.8:1 */
+  background: #BE4E2A;
+  border-color: #BE4E2A;
   color: #FFF8F2;
   box-shadow: 0 14px 34px -18px rgba(217, 107, 67, .9);
 }
 .btn-primary:hover {
-  background: var(--copper-600);
-  border-color: var(--copper-600);
+  background: #9C3F22;
+  border-color: #9C3F22;
   color: #FFF8F2;
 }
 .section-light .btn-primary,
 .section-tint .btn-primary {
-  background: var(--copper-500);
-  border-color: var(--copper-500);
+  background: #BE4E2A;
+  border-color: #BE4E2A;
   color: #FFF8F2;
   box-shadow: none;
 }
 .section-light .btn-primary:hover,
 .section-tint .btn-primary:hover {
-  background: var(--copper-600);
-  border-color: var(--copper-600);
+  background: #9C3F22;
+  border-color: #9C3F22;
   color: #FFF8F2;
 }
 .btn-outline:hover {
@@ -172,7 +173,7 @@ body::before {
 }
 .preview-bar__tag {
   padding: 5px 8px;
-  background: var(--copper-500);
+  background: #BE4E2A;
   color: #FFF8F2;
   font-size: 11.5px;
   font-weight: 700;
