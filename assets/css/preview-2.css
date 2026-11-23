@@ -75,26 +75,26 @@ body::before {
   /* one step deeper than the coral accent so the ivory label stays at 4.8:1 */
   background: #C74629;
   border-color: #C74629;
-  color: #FFF8F2;
+  color: #fff;
   box-shadow: 0 14px 34px -18px rgba(232, 93, 63, .9);
 }
 .btn-primary:hover {
   background: #A2351D;
   border-color: #A2351D;
-  color: #FFF8F2;
+  color: #fff;
 }
 .section-light .btn-primary,
 .section-tint .btn-primary {
   background: #C74629;
   border-color: #C74629;
-  color: #FFF8F2;
+  color: #fff;
   box-shadow: none;
 }
 .section-light .btn-primary:hover,
 .section-tint .btn-primary:hover {
   background: #A2351D;
   border-color: #A2351D;
-  color: #FFF8F2;
+  color: #fff;
 }
 .btn-outline:hover {
   background: var(--eco-600);
@@ -177,7 +177,7 @@ body::before {
 .preview-bar__tag {
   padding: 5px 8px;
   background: #C74629;
-  color: #FFF8F2;
+  color: #fff;
   font-size: 11.5px;
   font-weight: 700;
   letter-spacing: .04em;
