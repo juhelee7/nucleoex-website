@@ -5,7 +5,7 @@
 
 :root {
   /* base: vivid dark emerald / deep teal — clearly apart from 1안's deep navy (木)
-     white text: 15.1:1 / 12.4:1, mint label #6EE7CC: 10.1:1 / 8.2:1 */
+     white text 15.1:1 (950) / 12.4:1 (900); mint label #4ED8B8 8.5:1 / 7.0:1 */
   --navy-950: #072B29;
   --navy-900: #0B3B38;
   --navy-800: #104B47;
