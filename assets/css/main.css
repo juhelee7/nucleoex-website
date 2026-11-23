@@ -945,7 +945,7 @@ ul, ol { list-style: none; }
 
 @media (max-width: 880px) {
   :root { --header-h: 64px; }
-  .nav-desktop, .header-cta { display: none; }
+  .nav-desktop { display: none; }
   .nav-toggle { display: block; }
   .header-actions { margin-left: auto; gap: 8px; }
   .lang-switch { gap: 0; margin-right: 2px; }

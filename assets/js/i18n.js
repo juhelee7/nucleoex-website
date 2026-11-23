@@ -12,7 +12,6 @@ window.NUCLEOEX_I18N = {
     "nav.mile": "연혁·인증",
     "nav.ceo": "CEO 인사",
     "nav.contact": "문의",
-    "nav.cta": "IR 문의",
     "nav.ariaMain": "주요 메뉴",
     "nav.ariaMobile": "모바일 메뉴",
     "nav.ariaFooter": "하단 메뉴",
@@ -21,7 +20,6 @@ window.NUCLEOEX_I18N = {
     "hero.title": "생물 유래 소재로<br>산업의 내일을 설계합니다",
     "hero.lede": "(주)뉴클레오엑스는 성균관대학교 바이오-나노 소재 연구실에서 출발한 딥테크 소재 기업입니다. 생물 유래 소재로 난연 성능과 안전성을 함께 높이는 친환경 난연 솔루션을 주력 사업으로 합니다.",
     "hero.cta1": "핵심 기술 살펴보기",
-    "hero.cta2": "IR · 파트너십 문의",
 
     "about.label": "회사 소개",
     "about.title": "연구실의 발견을,<br>산업의 표준으로",
@@ -111,8 +109,8 @@ window.NUCLEOEX_I18N = {
     "ceo.markAlt": "(주)뉴클레오엑스 엠블럼",
     "ceo.role": "(주)뉴클레오엑스 대표이사 · 성균관대학교 신소재공학부 교수",
 
-    "contact.label": "문의",
-    "contact.title": "IR · 파트너십 문의",
+    "contact.label": "연락처",
+    "contact.title": "문의하기",
     "contact.desc": "소재 공급, 공동 개발, 투자 및 기술 이전에 관한 문의를 환영합니다. 확인 후 회신드립니다.",
     "contact.addr": "주소",
     "contact.addrValue": "경기 수원시 장안구 서부로 2066, 성균관대학교 산학협력센터 85212호 (천천동)",
@@ -143,7 +141,6 @@ window.NUCLEOEX_I18N = {
     "nav.mile": "Milestones",
     "nav.ceo": "CEO Message",
     "nav.contact": "Contact",
-    "nav.cta": "IR Contact",
     "nav.ariaMain": "Main menu",
     "nav.ariaMobile": "Mobile menu",
     "nav.ariaFooter": "Footer menu",
@@ -152,7 +149,6 @@ window.NUCLEOEX_I18N = {
     "hero.title": "Tomorrow's materials,<br>designed from biology",
     "hero.lede": "NucleoEX is a deep-tech materials company that began in the Biological & Nanoscale Materials Lab at SKKU. Our core business is an eco-friendly flame-retardant solution that raises both flame performance and safety through bio-derived materials.",
     "hero.cta1": "Explore our technology",
-    "hero.cta2": "IR & Partnership",
 
     "about.label": "Company",
     "about.title": "From a lab discovery<br>to an industry standard",
@@ -242,8 +238,8 @@ window.NUCLEOEX_I18N = {
     "ceo.markAlt": "NucleoEX emblem",
     "ceo.role": "CEO, NucleoEX Co., Ltd. · Professor, School of Advanced Materials Science & Engineering, SKKU",
 
-    "contact.label": "Contact",
-    "contact.title": "IR & Partnership",
+    "contact.label": "Inquiries",
+    "contact.title": "Contact",
     "contact.desc": "We welcome inquiries about material supply, joint development, investment, and technology transfer.",
     "contact.addr": "Address",
     "contact.addrValue": "Room 85212, Industry-Academic Cooperation Center, Sungkyunkwan University, 2066 Seobu-ro, Jangan-gu, Suwon, Gyeonggi-do, Korea",
