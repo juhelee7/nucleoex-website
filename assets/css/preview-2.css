@@ -117,7 +117,7 @@ body::before {
   border-color: rgba(78, 216, 184, .22);
 }
 .tech-lead-media { border-right-color: rgba(78, 216, 184, .22); }
-.tech-lead-body p { color: rgba(244, 248, 247, .74); }
+.tech-lead-body p:not(.tech-lead-tag) { color: rgba(244, 248, 247, .74); }
 /* small print that sat below 4.5:1 on the darker base is lifted for the brighter emerald */
 .pipeline-note { color: rgba(244, 248, 247, .62); }
 .lang-switch button { color: rgba(255, 255, 255, .6); }
