@@ -35,7 +35,7 @@
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/main.css?v=2026112301">
-<link rel="stylesheet" href="assets/css/preview-1.css?v=202611232330">
+<link rel="stylesheet" href="assets/css/preview-1.css?v=202611240035">
 <meta name="robots" content="noindex,follow">
 <script type="application/ld+json">
 {
@@ -563,14 +563,18 @@
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 <!-- color preview switcher (preview pages only) -->
 <div class="preview-bar" role="note" aria-label="색상 시안 미리보기">
-  <span class="preview-bar__tag">1안</span>
+  <span class="preview-bar__tag">색상 시안</span>
+  <nav class="preview-bar__switch" aria-label="시안 이동">
+    <span class="is-current" aria-current="page">1안</span>
+    <a href="preview-2.html">2안</a>
+    <a href="preview-3.html">3안</a>
+  </nav>
   <span class="preview-bar__label">딥 네이비(水) + 에메랄드(木)·코랄(火)</span>
-  <a href="preview-2.html">2안 보기 →</a>
 </div>
 
 
 <script src="assets/js/i18n.js?v=2026112302"></script>
 <script src="assets/js/main.js?v=2026112201"></script>
-<script>document.title = "[1안] " + document.title;</script>
+<script>document.title = "[1안] " + document.title.replace("[1안] ", "").replace("[2안] ", "").replace("[3안] ", "");</script>
 </body>
 </html>
