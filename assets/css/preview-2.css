@@ -4,11 +4,12 @@
    ========================================================================== */
 
 :root {
-  /* base: very dark deep emerald / deep teal with a cool blue cast (木) */
-  --navy-950: #051817;
-  --navy-900: #082220;
-  --navy-800: #0D2F2C;
-  --navy-700: #14413D;
+  /* base: vivid dark emerald / deep teal — clearly apart from 1안's deep navy (木)
+     white text: 15.1:1 / 12.4:1, mint label #6EE7CC: 10.1:1 / 8.2:1 */
+  --navy-950: #072B29;
+  --navy-900: #0B3B38;
+  --navy-800: #104B47;
+  --navy-700: #175E59;
 
   /* 木 — mint / emerald for eco, bio and secondary points */
   --brand: #0F766E;
@@ -55,10 +56,14 @@ body::before {
 .hero { background: var(--navy-950); }
 .hero-bg {
   background:
-    radial-gradient(52% 48% at 86% 8%, rgba(232, 93, 63, .20), transparent 62%),
-    radial-gradient(50% 52% at 0% 96%, rgba(16, 185, 129, .22), transparent 72%),
-    radial-gradient(60% 60% at 46% 44%, rgba(15, 118, 110, .16), transparent 76%);
+    radial-gradient(52% 48% at 86% 8%, rgba(232, 93, 63, .16), transparent 62%),
+    radial-gradient(50% 52% at 0% 96%, rgba(16, 185, 129, .18), transparent 72%),
+    radial-gradient(60% 60% at 46% 44%, rgba(15, 118, 110, .14), transparent 76%),
+    linear-gradient(180deg, #072B29 0%, #093431 56%, #0E4642 100%);
 }
+/* the brighter emerald makes .6 white a touch light: lift the hero copy just enough */
+.hero .eyebrow { color: rgba(255, 255, 255, .72); }
+.hero-lede { color: rgba(255, 255, 255, .76); }
 .hero .eyebrow::before {
   content: "";
   display: inline-block;
@@ -108,10 +113,14 @@ body::before {
 
 /* ---------- Technology ---------- */
 .tech-lead {
-  background: #0D2F2C;
-  border-color: rgba(78, 216, 184, .18);
+  background: #104B47;
+  border-color: rgba(78, 216, 184, .22);
 }
-.tech-lead-media { border-right-color: rgba(78, 216, 184, .18); }
+.tech-lead-media { border-right-color: rgba(78, 216, 184, .22); }
+.tech-lead-body p { color: rgba(244, 248, 247, .74); }
+/* small print that sat below 4.5:1 on the darker base is lifted for the brighter emerald */
+.pipeline-note { color: rgba(244, 248, 247, .62); }
+.lang-switch button { color: rgba(255, 255, 255, .6); }
 .tech-lead-tag { color: var(--eco-300); }
 .feature-label { color: var(--eco-300); }
 .chips li {
@@ -149,8 +158,8 @@ body::before {
 
 /* ---------- Footer ---------- */
 .site-footer {
-  background: linear-gradient(180deg, #061F1C 0%, #041312 70%);
-  border-top-color: rgba(78, 216, 184, .16);
+  background: #05201E;
+  border-top-color: rgba(78, 216, 184, .2);
 }
 .toast { background: var(--navy-800); }
 
@@ -164,7 +173,7 @@ body::before {
   align-items: center;
   gap: 10px;
   padding: 8px 12px 8px 8px;
-  background: rgba(4, 20, 19, .88);
+  background: rgba(5, 30, 28, .9);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(244, 248, 247, .18);
