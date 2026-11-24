@@ -4,8 +4,12 @@
    Base = 2안's very dark deep emerald at bbe6b1d (#051817 → #14413D),
    with a 1~5안 switcher badge. 2026-11-24: coral (火) reinforced at the small
    details (section-label dash, 주력 사업 / 플랫폼 labels, the platform divider,
-   the two newest timeline dots, the CEO quote rule, the facts keys) so the warmth
+   the two newest timeline dots, the facts keys) so the warmth
    runs down the page while the dark emerald keeps its weight.
+   2026-11-24 (2nd round, from the client's PDF): the section labels themselves
+   turn coral at 14px/700, the facts keys go bold, the CEO quote loses its coral
+   left rule, and the two pipeline cards drop their decorative SVG mark and all
+   tag chips (done in preview-3.html) so the page stops reading as "we do it all".
    ========================================================================== */
 
 :root {
@@ -109,12 +113,19 @@ body::before {
 }
 
 /* ---------- Section labels ---------- */
-.section-dark .section-label { color: var(--brand-300); }
 .section-dark .section-desc { color: rgba(244, 248, 247, .62); }
 
-/* 火 — the small dash before every section label carries the coral thread
-   down the whole scroll (회사 소개 · 핵심 기술 · 차별성 · 연혁 · CEO 인사 · 연락처).
-   Decorative 1px rule only: label text keeps its mint/emerald colour for AA contrast. */
+/* 火 — the section labels themselves carry the coral thread down the whole scroll
+   (회사 소개 · 핵심 기술 · 차별성 · 2012-2026 · CEO 인사 · 연락처).
+   Light sections #BC4128 (4.99:1 on the paper, 4.61:1 on the tint), dark #F0704F (5.7:1).
+   14px / 700 keeps them clearly present without competing with the h2 beneath. */
+.section-label {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .02em;
+  color: #BC4128;
+}
+.section-dark .section-label { color: #F0704F; }
 .section-label::before { background: #C74629; opacity: 1; }
 .section-dark .section-label::before { background: #F0704F; }
 
@@ -165,19 +176,10 @@ body::before {
   height: 1px;
   background: linear-gradient(90deg, rgba(232, 93, 63, .62), rgba(232, 93, 63, .22) 26%, rgba(78, 216, 184, .16) 62%, rgba(244, 248, 247, .06) 100%);
 }
-.chips li {
-  border-color: rgba(78, 216, 184, .26);
-  color: rgba(226, 250, 243, .74);
-}
-.pipeline-media { opacity: .85; }
-/* inline SVG accents: indigo → emerald/mint */
-#gSensor stop:first-child { stop-color: #A7F3D0; }
-#gSensor stop:last-child { stop-color: #0F766E; }
-#gComp stop:first-child { stop-color: #6EE7B7; }
-#gComp stop:last-child { stop-color: #0B5B55; }
-.pipeline-media [fill="#A9ACEA"] { fill: #6EE7B7; }
-.pipeline-media [fill="#B4B7F0"] { fill: #34D399; }
-.pipeline-media [stroke="#A9ACEA"] { stroke: #6EE7B7; }
+/* the two pipeline cards lost their decorative SVG mark and their tag chips:
+   one single text column, so the copy reads plain and nothing hints at a wider
+   product line than the company actually runs today. */
+.pipeline-card { grid-template-columns: minmax(0, 1fr); gap: 0; }
 
 /* ---------- Milestones ---------- */
 /* 木 for the archive, 火 for the latest: the line starts coral and settles into emerald,
@@ -196,15 +198,21 @@ body::before {
 .timeline > li:nth-child(2) .year { color: #BC4128; }
 
 /* ---------- CEO ---------- */
-/* 火 — the quote rule is the one warm line in the dark CEO block */
+/* the quote stands on its own — no coral rule at its left edge, no indent */
 .ceo blockquote {
-  border-left-width: 2px;
-  border-left-color: #E85D3F;
+  border-left: 0;
+  padding-left: 0;
 }
 
 /* ---------- About facts ---------- */
-/* 火 — small coral keys in the facts table (4.62:1 on the cool paper) */
-.facts dt { color: #BC4128; }
+/* 火 — the facts keys were too thin to read at 12px/400; bold and one step larger
+   (4.62:1 on the cool paper) */
+.facts dt {
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: .02em;
+  color: #BC4128;
+}
 
 /* ---------- Contact ---------- */
 .copy-btn { border-color: rgba(15, 118, 110, .34); }
