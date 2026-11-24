@@ -123,8 +123,10 @@ body::before {
 .tech-lead-media { border-right-color: rgba(78, 216, 184, .18); }
 /* main.css paints every .tech-lead-body p grey; lift the body copy but keep the mint tag */
 .tech-lead-body p:not(.tech-lead-tag) { color: rgba(244, 248, 247, .78); }
-/* 火 — '주력 사업' tag: coral with a short lead-in rule (4.9:1 on #0D2F2C) */
-.tech-lead-tag {
+/* 火 — '주력 사업' tag: coral with a short lead-in rule (4.9:1 on #0D2F2C).
+   main.css paints every .tech-lead-body p at rgba(255,255,255,.66), so the
+   selector must outrank that (p + class) to reach the tag. */
+.tech-lead-body p.tech-lead-tag {
   display: inline-flex;
   align-items: center;
   gap: 9px;
