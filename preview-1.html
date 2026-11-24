@@ -568,6 +568,8 @@
     <span class="is-current" aria-current="page">1안</span>
     <a href="preview-2.html">2안</a>
     <a href="preview-3.html">3안</a>
+    <a href="preview-4.html">4안</a>
+    <a href="preview-5.html">5안</a>
   </nav>
   <span class="preview-bar__label">딥 네이비(水) + 에메랄드(木)·코랄(火)</span>
 </div>
@@ -575,6 +577,6 @@
 
 <script src="assets/js/i18n.js?v=2026112302"></script>
 <script src="assets/js/main.js?v=2026112201"></script>
-<script>document.title = "[1안] " + document.title.replace("[1안] ", "").replace("[2안] ", "").replace("[3안] ", "");</script>
+<script>document.title = "[1안] " + document.title.replace(/^\[([1-5])안\] /, "");</script>
 </body>
 </html>

@@ -1,0 +1,251 @@
+/* ==========================================================================
+   NucleoEX · color preview 5 — 木(숲속 포레스트그린) 바탕 + 火(코랄) 포인트
+   Loaded only by preview-5.html, after main.css. index.html / main.css untouched.
+   Livelier forest green, one step more saturated than 4안:
+   #123622 → #1A4B30 → #23613F → #2C7550.
+   White text 13.3:1 on 950 / 9.6:1 on 900 / 7.4:1 on 800; mint accents 4.8:1+.
+   One forest green for the whole timeline, coral CTAs, 1안~5안 switcher badge.
+   ========================================================================== */
+
+:root {
+  /* base: forest green with more saturation and life than 4안 (木) */
+  --navy-950: #123622;
+  --navy-900: #1A4B30;
+  --navy-800: #23613F;
+  --navy-700: #2C7550;
+
+  /* 木 — forest green / bright mint for eco, bio and secondary points */
+  --brand: #27794D;
+  --brand-600: #1F6140;
+  --brand-300: #A6E4C1;
+  --brand-100: #DDF3E7;
+  --eco-600: #27794D;
+  --eco-500: #2E9A62;
+  --eco-300: #6EE7B7;
+
+  /* 火 — coral / ember for flame, key points and CTAs */
+  --fire-600: #C74629;
+  --fire-500: #E05A3A;
+  --amber: #F0932B;
+
+  /* fresh light green paper for the light sections */
+  --paper: #F4F9F5;
+  --paper-2: #E5F0E8;
+  --ink: #0C1F14;
+  --ink-soft: #31463A;
+  --muted: #5A6D60;
+  --line: rgba(12, 31, 20, .14);
+  --line-strong: rgba(12, 31, 20, .27);
+  --line-dark: rgba(244, 249, 245, .14);
+  --line-dark-soft: rgba(244, 249, 245, .07);
+  --ivory: #F4F9F5;
+}
+
+/* 木 → 火 accent rule along the very top */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  z-index: 120;
+  pointer-events: none;
+  background: linear-gradient(90deg, #27794D 0%, #2E9A62 28%, #6EE7B7 46%, #E05A3A 78%, #F0932B 100%);
+}
+
+::selection { background: var(--eco-600); color: var(--ivory); }
+:focus-visible { outline-color: var(--eco-300); }
+
+/* ---------- Hero ---------- */
+.hero { background: var(--navy-950); }
+.hero-bg {
+  background:
+    radial-gradient(52% 48% at 86% 8%, rgba(224, 90, 58, .18), transparent 62%),
+    radial-gradient(52% 54% at 0% 96%, rgba(46, 154, 98, .34), transparent 72%),
+    radial-gradient(62% 62% at 46% 44%, rgba(39, 121, 77, .26), transparent 76%);
+}
+.hero .eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 7px; height: 7px;
+  margin-right: 11px;
+  position: relative;
+  top: -1px;
+  vertical-align: middle;
+  background: var(--fire-500);
+}
+
+/* ---------- Buttons ---------- */
+.btn-primary {
+  /* deep coral keeps the white label at 4.8:1; the brighter coral stays an accent */
+  background: #C74629;
+  border-color: #C74629;
+  color: #fff;
+  box-shadow: 0 14px 34px -18px rgba(224, 90, 58, .9);
+}
+.btn-primary:hover {
+  background: #A2351D;
+  border-color: #A2351D;
+  color: #fff;
+}
+.section-light .btn-primary,
+.section-tint .btn-primary {
+  background: #C74629;
+  border-color: #C74629;
+  color: #fff;
+  box-shadow: none;
+}
+.section-light .btn-primary:hover,
+.section-tint .btn-primary:hover {
+  background: #A2351D;
+  border-color: #A2351D;
+  color: #fff;
+}
+.btn-outline:hover {
+  background: var(--eco-600);
+  border-color: var(--eco-600);
+  color: var(--ivory);
+}
+
+/* ---------- Section labels ---------- */
+.section-dark .section-label { color: var(--brand-300); }
+.section-dark .section-desc { color: rgba(244, 249, 245, .66); }
+
+/* ---------- Technology ---------- */
+.tech-lead {
+  background: #23613F;
+  border-color: rgba(166, 228, 193, .22);
+}
+.tech-lead-media { border-right-color: rgba(166, 228, 193, .22); }
+/* main.css paints every .tech-lead-body p grey; lift the body copy but keep the mint tag */
+.tech-lead-body p:not(.tech-lead-tag) { color: rgba(244, 249, 245, .82); }
+.tech-lead-tag { color: var(--eco-300); }
+.feature-label { color: var(--eco-300); }
+.chips li {
+  border-color: rgba(166, 228, 193, .30);
+  color: rgba(232, 248, 238, .80);
+}
+.pipeline-media { opacity: .88; }
+/* inline SVG accents: indigo → forest green / bright mint */
+#gSensor stop:first-child { stop-color: #A7F3D0; }
+#gSensor stop:last-child { stop-color: #27794D; }
+#gComp stop:first-child { stop-color: #6EE7B7; }
+#gComp stop:last-child { stop-color: #1F6140; }
+.pipeline-media [fill="#A9ACEA"] { fill: #6EE7B7; }
+.pipeline-media [fill="#B4B7F0"] { fill: #4FD1A0; }
+.pipeline-media [stroke="#A9ACEA"] { stroke: #6EE7B7; }
+
+/* ---------- Milestones ---------- */
+/* one forest green for the whole timeline: line, every year dot, key years alike */
+.timeline::before {
+  background: linear-gradient(180deg, rgba(39, 121, 77, .62), rgba(39, 121, 77, .32));
+}
+.timeline > li::before { background: var(--eco-600); }
+.timeline .year { color: var(--eco-600); }
+
+/* ---------- CEO ---------- */
+.ceo blockquote { border-left-color: var(--eco-500); }
+
+/* ---------- Contact ---------- */
+.copy-btn { border-color: rgba(39, 121, 77, .36); }
+.copy-btn:hover,
+.copy-btn.is-done { background: var(--eco-600); border-color: var(--eco-600); }
+.ci-body a:hover { color: var(--eco-600); }
+.contact-map iframe { filter: grayscale(.3) sepia(.05) saturate(.9) contrast(1.02); }
+.map-note { background: var(--paper); }
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background: linear-gradient(180deg, #0E2E1D 0%, #081C12 70%);
+  border-top-color: rgba(166, 228, 193, .20);
+}
+.toast { background: var(--navy-800); }
+
+/* ---------- Preview switcher (1안 · 2안 · 3안 · 4안 · 5안) ---------- */
+.preview-bar {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 110;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px 8px 8px;
+  background: rgba(7, 24, 15, .9);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(244, 249, 245, .18);
+  border-radius: 6px;
+  color: var(--ivory);
+  font-size: 12.5px;
+  line-height: 1;
+  letter-spacing: -.01em;
+  box-shadow: 0 16px 40px -20px rgba(0, 0, 0, .95);
+}
+.preview-bar__tag {
+  flex: none;
+  padding: 5px 8px;
+  background: #C74629;
+  color: #fff;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  white-space: nowrap;
+  border-radius: 3px;
+}
+.preview-bar__label {
+  color: rgba(244, 249, 245, .74);
+  white-space: nowrap;
+}
+.preview-bar__switch {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 3px;
+  border: 1px solid rgba(244, 249, 245, .20);
+  border-radius: 4px;
+  background: rgba(244, 249, 245, .06);
+}
+.preview-bar__switch a,
+.preview-bar__switch span {
+  display: inline-block;
+  min-width: 32px;
+  padding: 5px 6px;
+  border-radius: 3px;
+  text-align: center;
+  font-size: 11.5px;
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+  transition: color .2s, background-color .2s;
+}
+.preview-bar__switch a {
+  color: rgba(244, 249, 245, .82);
+  border-bottom: 0;
+}
+.preview-bar__switch a:hover {
+  color: var(--eco-300);
+  background: rgba(244, 249, 245, .1);
+  border-color: transparent;
+}
+.preview-bar__switch .is-current {
+  background: var(--ivory);
+  color: #0C1F14;
+  font-weight: 700;
+}
+
+@media (max-width: 640px) {
+  /* sit above the back-to-top control in the bottom-right corner */
+  .preview-bar {
+    right: 12px;
+    bottom: 72px;
+    gap: 8px;
+    padding: 7px 8px 7px 7px;
+    font-size: 11.5px;
+    border-radius: 5px;
+  }
+  .preview-bar__tag { padding: 5px 7px; font-size: 11px; }
+  .preview-bar__label { display: none; }
+  .preview-bar__switch a,
+  .preview-bar__switch span { min-width: 27px; padding: 5px 4px; font-size: 11px; }
+}
