@@ -24,7 +24,7 @@
   }
 
   function pageUrl(lang) {
-    return "https://juhelee7.github.io/nucleoex-website/" + (lang === "en" ? "?lang=en" : "");
+    return "https://nucleoex.com/" + (lang === "en" ? "?lang=en" : "");
   }
 
   function applyLang(lang, persist) {

@@ -1,6 +1,7 @@
 /* ==========================================================================
    NucleoEX · Corporate / IR website
-   Palette: brand indigo (#252494, from the logo) + deep navy + paper white
+   木(아주 어두운 딥 에메랄드) 바탕 + 火(코랄/엠버) 포인트 + 아이스 페이퍼
+   2026-11-24: 3안 확정. 이전 인디고/네이비 팔레트를 이 파일에서 직접 대체했다.
    ========================================================================== */
 
 @font-face {
@@ -12,24 +13,39 @@
 }
 
 :root {
-  --navy-950: #080D1C;
-  --navy-900: #0E1526;
-  --navy-800: #16203A;
-  --navy-700: #22304F;
-  --brand: #252494;
-  --brand-600: #1C1B7A;
-  --brand-300: #9C9AE8;
-  --brand-100: #E3E2F7;
-  --paper: #F7F8FA;
-  --paper-2: #EDEFF4;
+  /* 木 — very dark deep emerald / deep teal for the dark sections
+     white text 18.3:1 on 950 / 16.7:1 on 900; mint label #4ED8B8 10.3:1 / 9.4:1 */
+  --navy-950: #051817;
+  --navy-900: #082220;
+  --navy-800: #0D2F2C;
+  --navy-700: #14413D;
+
+  /* 木 — mint / emerald for eco, bio and secondary points */
+  --brand: #0F766E;
+  --brand-600: #0B5B55;
+  --brand-300: #4ED8B8;
+  --brand-100: #D6F3E9;
+  --eco-600: #0F766E;
+  --eco-500: #10B981;
+  --eco-300: #34D399;
+
+  /* 火 — coral / ember for flame, key points and CTAs */
+  --fire-600: #C74629;
+  --fire-500: #E85D3F;
+  --amber: #F59E0B;
+
+  /* cool ice paper for the light sections */
+  --paper: #F4F8F7;
+  --paper-2: #E8F0EE;
   --white: #FFFFFF;
-  --ink: #0D1424;
-  --ink-soft: #3A4459;
-  --muted: #6E7789;
-  --line: rgba(13, 20, 36, .13);
-  --line-strong: rgba(13, 20, 36, .26);
-  --line-dark: rgba(255, 255, 255, .14);
-  --line-dark-soft: rgba(255, 255, 255, .07);
+  --ivory: #F4F8F7;
+  --ink: #0B1B19;
+  --ink-soft: #33443F;
+  --muted: #5C6B66;
+  --line: rgba(11, 27, 25, .14);
+  --line-strong: rgba(11, 27, 25, .27);
+  --line-dark: rgba(244, 248, 247, .14);
+  --line-dark-soft: rgba(244, 248, 247, .07);
   --ease: cubic-bezier(.22, .61, .36, 1);
   --container: 1240px;
   --pad: clamp(20px, 5vw, 56px);
@@ -61,16 +77,27 @@ body {
 
 body.is-locked { overflow: hidden; }
 
+/* 木 → 火 accent rule along the very top of the page */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  z-index: 120;
+  pointer-events: none;
+  background: linear-gradient(90deg, #0F766E 0%, #10B981 26%, #34D399 46%, #E85D3F 78%, #F59E0B 100%);
+}
+
 img, svg, iframe { display: block; max-width: 100%; }
 img { height: auto; }
 a { color: inherit; text-decoration: none; }
 button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
 ul, ol, dl, dd, p, h1, h2, h3, h4, blockquote, figure { margin: 0; padding: 0; }
 ul, ol { list-style: none; }
-::selection { background: var(--brand); color: #fff; }
+::selection { background: var(--eco-600); color: var(--ivory); }
 
 :focus-visible {
-  outline: 2px solid var(--brand-300);
+  outline: 2px solid var(--eco-300);
   outline-offset: 3px;
 }
 
@@ -109,26 +136,29 @@ ul, ol { list-style: none; }
   white-space: nowrap;
   transition: background-color .2s var(--ease), color .2s var(--ease), border-color .2s var(--ease);
 }
+/* 火 — one step deeper than the coral accent so the ivory label stays at 4.8:1 */
 .btn-primary {
-  background: #fff;
-  border-color: #fff;
-  color: var(--navy-950);
+  background: #C74629;
+  border-color: #C74629;
+  color: #fff;
+  box-shadow: 0 14px 34px -18px rgba(232, 93, 63, .9);
 }
 .btn-primary:hover {
-  background: #E4E6EF;
-  border-color: #E4E6EF;
-  color: var(--navy-950);
+  background: #A2351D;
+  border-color: #A2351D;
+  color: #fff;
 }
 .section-light .btn-primary,
 .section-tint .btn-primary {
-  background: var(--navy-900);
-  border-color: var(--navy-900);
+  background: #C74629;
+  border-color: #C74629;
   color: #fff;
+  box-shadow: none;
 }
 .section-light .btn-primary:hover,
 .section-tint .btn-primary:hover {
-  background: var(--navy-700);
-  border-color: var(--navy-700);
+  background: #A2351D;
+  border-color: #A2351D;
   color: #fff;
 }
 .btn-ghost {
@@ -145,9 +175,9 @@ ul, ol { list-style: none; }
   color: var(--ink);
 }
 .btn-outline:hover {
-  background: var(--navy-900);
-  border-color: var(--navy-900);
-  color: #fff;
+  background: var(--eco-600);
+  border-color: var(--eco-600);
+  color: var(--ivory);
 }
 .btn-sm { padding: 11px 20px; font-size: 14px; }
 
@@ -323,8 +353,9 @@ ul, ol { list-style: none; }
   inset: 0;
   z-index: -1;
   background:
-    radial-gradient(60% 55% at 82% 8%, rgba(37, 36, 148, .32), transparent 66%),
-    radial-gradient(45% 45% at 4% 96%, rgba(37, 36, 148, .14), transparent 72%);
+    radial-gradient(52% 48% at 86% 8%, rgba(232, 93, 63, .20), transparent 62%),
+    radial-gradient(50% 52% at 0% 96%, rgba(16, 185, 129, .22), transparent 72%),
+    radial-gradient(60% 60% at 46% 44%, rgba(15, 118, 110, .16), transparent 76%);
 }
 
 .hero-inner {
@@ -338,6 +369,17 @@ ul, ol { list-style: none; }
   letter-spacing: 0;
   color: rgba(255, 255, 255, .6);
   margin-bottom: 26px;
+}
+/* 火 — a small coral square opens the page */
+.hero .eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 7px; height: 7px;
+  margin-right: 11px;
+  position: relative;
+  top: -1px;
+  vertical-align: middle;
+  background: var(--fire-500);
 }
 
 .hero h1 {
@@ -372,23 +414,28 @@ ul, ol { list-style: none; }
 .section-tint { background: var(--paper-2); color: var(--ink); }
 .section-dark { background: var(--navy-900); color: #fff; }
 
+/* 火 — the section labels carry the coral thread down the whole scroll
+   (회사 소개 · 핵심 기술 · 차별성 · 2012-2026 · CEO 인사 · 연락처).
+   Light sections #BC4128 (4.99:1 on the paper, 4.61:1 on the tint), dark #F0704F (5.7:1).
+   14px / 700 keeps them clearly present without competing with the h2 beneath. */
 .section-label {
   display: flex;
   align-items: center;
   gap: 12px;
-  font-size: 13px;
-  letter-spacing: .01em;
-  font-weight: 600;
-  color: var(--brand);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .02em;
+  color: #BC4128;
   margin-bottom: 20px;
 }
 .section-label::before {
   content: "";
   width: 18px; height: 1px;
-  background: currentColor;
-  opacity: .7;
+  background: #C74629;
+  opacity: 1;
 }
-.section-dark .section-label { color: var(--brand-300); }
+.section-dark .section-label { color: #F0704F; }
+.section-dark .section-label::before { background: #F0704F; }
 
 .section-title {
   font-size: clamp(27px, 3.3vw, 44px);
@@ -404,7 +451,7 @@ ul, ol { list-style: none; }
   color: var(--muted);
   word-break: keep-all;
 }
-.section-dark .section-desc { color: rgba(255, 255, 255, .6); }
+.section-dark .section-desc { color: rgba(244, 248, 247, .62); }
 .section-head { max-width: 800px; margin-bottom: clamp(44px, 6vw, 72px); }
 .section-head .section-desc { margin-top: 24px; }
 .section-head-row {
@@ -445,10 +492,12 @@ ul, ol { list-style: none; }
   border-bottom: 1px solid var(--line);
 }
 .facts div:nth-child(odd) { padding-right: 24px; }
+/* 火 — the facts keys: bold at 12.5px (4.62:1 on the cool paper) */
 .facts dt {
-  font-size: 12px;
+  font-size: 12.5px;
+  font-weight: 700;
   letter-spacing: .02em;
-  color: var(--muted);
+  color: #BC4128;
   margin-bottom: 6px;
 }
 .facts dd {
@@ -465,14 +514,14 @@ ul, ol { list-style: none; }
 .tech-lead {
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-  border: 1px solid var(--line-dark);
-  background: #111B31;
+  border: 1px solid rgba(78, 216, 184, .18);
+  background: #0D2F2C;
 }
 .tech-lead-media {
   position: relative;
   overflow: hidden;
   min-height: 340px;
-  border-right: 1px solid var(--line-dark);
+  border-right: 1px solid rgba(78, 216, 184, .18);
 }
 .tech-lead-media img {
   width: 100%; height: 100%;
@@ -485,11 +534,23 @@ ul, ol { list-style: none; }
   flex-direction: column;
   justify-content: center;
 }
-.tech-lead-tag {
+/* 火 — '주력 사업' tag: coral with a short lead-in rule (4.9:1 on #0D2F2C).
+   p + class keeps it ahead of the body-copy rule below. */
+.tech-lead-body p.tech-lead-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
   font-size: 13px;
   font-weight: 600;
-  color: var(--brand-300);
+  color: #F0704F;
   margin-bottom: 16px;
+}
+.tech-lead-tag::before {
+  content: "";
+  flex: none;
+  width: 14px; height: 1px;
+  background: currentColor;
+  opacity: .9;
 }
 .tech-lead-body h3 {
   font-size: clamp(24px, 2.6vw, 34px);
@@ -502,7 +563,7 @@ ul, ol { list-style: none; }
 .tech-lead-body p {
   font-size: 15px;
   line-height: 1.85;
-  color: rgba(255, 255, 255, .66);
+  color: rgba(244, 248, 247, .78);
   word-break: keep-all;
 }
 
@@ -528,19 +589,16 @@ ul, ol { list-style: none; }
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0 clamp(28px, 4vw, 64px);
 }
+/* the two pipeline cards are one single text column: no decorative SVG mark and
+   no tag chips, so nothing hints at a wider product line than the company runs today */
 .pipeline-card {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 112px;
-  gap: 20px;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0;
   align-items: start;
   padding: 26px 0 30px;
   border-top: 1px solid var(--line-dark);
 }
-.pipeline-media {
-  order: 2;
-  opacity: .8;
-}
-.pipeline-media svg { width: 100%; height: auto; }
 .pipeline-body { padding: 0; display: flex; flex-direction: column; }
 .pipeline-body h3 {
   font-size: clamp(17px, 1.5vw, 19px);
@@ -556,36 +614,40 @@ ul, ol { list-style: none; }
   word-break: keep-all;
 }
 
-.chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-  margin-top: auto;
-  padding-top: 24px;
-}
-.chips li {
-  font-size: 11.5px;
-  padding: 4px 9px;
-  border: 1px solid var(--line-dark);
-  color: rgba(255, 255, 255, .7);
-  white-space: nowrap;
-}
-
 .feature {
+  position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr);
   gap: clamp(28px, 4vw, 60px);
   align-items: start;
   margin-top: clamp(40px, 5vw, 64px);
   padding: clamp(28px, 4vw, 44px) 0 0;
-  border-top: 1px solid var(--line-dark);
 }
+/* 火 → 木 hairline above the platform block: coral at the left, mint by the middle */
+.feature::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(232, 93, 63, .62), rgba(232, 93, 63, .22) 26%, rgba(78, 216, 184, .16) 62%, rgba(244, 248, 247, .06) 100%);
+}
+/* 火 — '생물 유래 분자 플랫폼' label and its short rule */
 .feature-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
   font-size: 13px;
   letter-spacing: .01em;
   font-weight: 600;
-  color: var(--brand-300);
+  color: #F0704F;
   margin-bottom: 14px;
+}
+.feature-label::before {
+  content: "";
+  flex: none;
+  width: 14px; height: 1px;
+  background: currentColor;
+  opacity: .9;
 }
 .feature h3 {
   font-size: clamp(21px, 2.1vw, 27px);
@@ -657,6 +719,7 @@ ul, ol { list-style: none; }
   position: relative;
   padding-left: 26px;
 }
+/* 木 for the archive, 火 for the latest: the line starts coral and settles into emerald */
 .timeline::before {
   content: "";
   position: absolute;
@@ -664,7 +727,7 @@ ul, ol { list-style: none; }
   top: 12px;
   bottom: 12px;
   width: 1px;
-  background: var(--line);
+  background: linear-gradient(180deg, rgba(232, 93, 63, .62) 0%, rgba(232, 93, 63, .32) 9%, rgba(15, 118, 110, .30) 27%, rgba(15, 118, 110, .48) 100%);
 }
 .timeline > li {
   position: relative;
@@ -680,16 +743,24 @@ ul, ol { list-style: none; }
   left: -26px;
   top: 9px;
   width: 7px; height: 7px;
-  background: var(--brand);
+  background: var(--eco-600);
 }
 .timeline .year {
   font-size: 15px;
   font-weight: 700;
   letter-spacing: -0.01em;
-  color: var(--ink);
+  color: var(--eco-600);
   font-variant-numeric: tabular-nums;
   line-height: 1.65;
 }
+/* the two newest milestones keep a coral dot */
+.timeline > li:nth-child(1)::before,
+.timeline > li:nth-child(2)::before {
+  background: #E85D3F;
+  box-shadow: 0 0 0 3px rgba(232, 93, 63, .14);
+}
+.timeline > li:nth-child(1) .year,
+.timeline > li:nth-child(2) .year { color: #BC4128; }
 .timeline > li > div { position: relative; }
 .timeline h3 {
   font-size: clamp(17px, 1.4vw, 19px);
@@ -741,10 +812,9 @@ ul, ol { list-style: none; }
   opacity: .035;
   pointer-events: none;
 }
+/* the quote stands on its own — no rule at its left edge, no indent */
 .ceo blockquote {
   margin: 0 0 44px;
-  padding-left: clamp(18px, 2.4vw, 28px);
-  border-left: 1px solid var(--brand-300);
 }
 .ceo blockquote p {
   max-width: 880px;
@@ -791,7 +861,7 @@ ul, ol { list-style: none; }
   align-items: start;
 }
 .contact-left .section-title { margin-bottom: 18px; }
-.contact-left > p {
+.contact-left > p:not(.section-label) {
   font-size: 15.5px;
   line-height: 1.82;
   color: var(--ink-soft);
@@ -830,11 +900,11 @@ ul, ol { list-style: none; }
   font-weight: 600;
   color: var(--brand);
   padding: 5px 12px;
-  border: 1px solid rgba(37, 36, 148, .32);
+  border: 1px solid rgba(15, 118, 110, .34);
   transition: background .2s, color .2s, border-color .2s;
 }
-.copy-btn:hover { background: var(--brand); border-color: var(--brand); color: #fff; }
-.copy-btn.is-done { background: var(--brand); color: #fff; border-color: var(--brand); }
+.copy-btn:hover { background: var(--eco-600); border-color: var(--eco-600); color: #fff; }
+.copy-btn.is-done { background: var(--eco-600); color: #fff; border-color: var(--eco-600); }
 .contact-cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 34px; }
 
 .contact-map {
@@ -847,7 +917,7 @@ ul, ol { list-style: none; }
   width: 100%;
   height: clamp(320px, 38vw, 420px);
   border: 0;
-  filter: grayscale(.35) contrast(1.04);
+  filter: grayscale(.3) sepia(.05) saturate(.9) contrast(1.02);
   transition: filter .4s;
 }
 .contact-map:hover iframe { filter: none; }
@@ -856,15 +926,15 @@ ul, ol { list-style: none; }
   font-size: 12.5px;
   color: var(--muted);
   border-top: 1px solid var(--line);
-  background: #fff;
+  background: var(--paper);
 }
 
 /* ---------- Footer ---------- */
 .site-footer {
-  background: var(--navy-950);
-  color: rgba(255, 255, 255, .52);
+  background: linear-gradient(180deg, #061F1C 0%, #041312 70%);
+  color: rgba(244, 248, 247, .52);
   padding: clamp(52px, 6vw, 80px) 0 36px;
-  border-top: 1px solid var(--line-dark-soft);
+  border-top: 1px solid rgba(78, 216, 184, .16);
 }
 .footer-inner {
   display: grid;
@@ -935,7 +1005,7 @@ ul, ol { list-style: none; }
   .split { grid-template-columns: 1fr; gap: 40px; }
   .split-left { position: static; }
   .tech-lead { grid-template-columns: 1fr; }
-  .tech-lead-media { min-height: 280px; border-right: 0; border-bottom: 1px solid var(--line-dark); }
+  .tech-lead-media { min-height: 280px; border-right: 0; border-bottom: 1px solid rgba(78, 216, 184, .18); }
   .feature { grid-template-columns: 1fr; }
 
   .contact-grid { grid-template-columns: 1fr; }
@@ -1000,8 +1070,6 @@ ul, ol { list-style: none; }
   .signature { align-items: flex-start; }
   .signature img { height: 42px; }
   .tech-lead-media { min-height: 220px; }
-  .pipeline-card { grid-template-columns: 1fr; }
-  .pipeline-media { display: none; }
   .feature { padding: 26px 20px; }
   .map-note { font-size: 12px; }
 }

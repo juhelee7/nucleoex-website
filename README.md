@@ -3,7 +3,7 @@
 성균관대학교 바이오-나노 소재 연구실 기반 딥테크 소재 기업 **(주)뉴클레오엑스**의 공식 홈페이지입니다.
 빌드 도구 없이 동작하는 정적 사이트로, GitHub Pages에서 바로 서비스됩니다.
 
-- 라이브(예정/운영): https://juhelee7.github.io/nucleoex-website/
+- 라이브: https://nucleoex.com/ (영문은 https://nucleoex.com/?lang=en)
 - 저장소: https://github.com/juhelee7/nucleoex-website
 
 ## 구성
@@ -40,7 +40,7 @@ assets/img/                로고, 히어로 배경, 기술 이미지, 파비콘
 
 ## CSS/JS를 고친 뒤 (캐시 주의)
 
-`index.html`의 `main.css?v=2026112125`, `i18n.js?v=...`, `main.js?v=...` 끝의 숫자를 한 단계 올려 주세요.
+`index.html`의 `main.css?v=2026112401`, `i18n.js?v=...`, `main.js?v=...` 끝의 숫자를 한 단계 올려 주세요.
 GitHub Pages와 방문자 브라우저가 예전 파일을 계속 쓰는 것을 막습니다.
 
 ## 배포
@@ -51,15 +51,14 @@ GitHub Pages와 방문자 브라우저가 예전 파일을 계속 쓰는 것을 
 git add -A && git commit -m "내용 수정" && git push origin main
 ```
 
-## 커스텀 도메인(www.nucleoex.com)으로 옮길 때
+## 커스텀 도메인 (nucleoex.com — 2026-11-23 적용 완료)
 
-1. DNS 관리(도메인 등록업체)에서 아래 레코드를 추가합니다.
-   - `A` `@` → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
-   - `CNAME` `www` → `juhelee7.github.io`
-2. 저장소 Settings → Pages → Custom domain에 `www.nucleoex.com` 입력 후 Save, `Enforce HTTPS` 체크.
-3. 도메인이 살아나면 `index.html`의 `canonical`·`og:url`·`og:image`, `sitemap.xml`, `robots.txt`의
-   `https://juhelee7.github.io/nucleoex-website/` 주소를 `https://www.nucleoex.com/`으로 바꿉니다.
-4. `404.html`의 `/nucleoex-website/assets/...` 경로도 `/assets/...`로 바꿉니다(저장소 하위 경로용으로 작성되어 있음).
+`nucleoex.com`은 Cloudflare DNS에서 GitHub Pages로 연결되어 있고(루트 A 레코드 4개 + `www` CNAME),
+저장소 `CNAME` 파일에 `nucleoex.com`이 들어 있습니다. HTTPS는 GitHub Pages 인증서로 자동 발급됩니다.
+`nucleoex.co.kr`과 `www`는 301로 `https://nucleoex.com`에 넘깁니다.
+
+바꿀 때는 `index.html`의 `canonical`·`og:url`·`og:image`, `404.html`의 링크, `sitemap.xml`, `robots.txt`,
+`assets/js/main.js`의 `pageUrl()`까지 같은 도메인으로 맞춰 주세요.
 
 ## 공개 범위 원칙
 

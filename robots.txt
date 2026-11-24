@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://juhelee7.github.io/nucleoex-website/sitemap.xml
+Sitemap: https://nucleoex.com/sitemap.xml
