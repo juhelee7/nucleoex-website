@@ -2,7 +2,10 @@
    NucleoEX · color preview 3 — 木(아주 어두운 딥 에메랄드) 바탕 + 火(코랄/엠버) 포인트
    Loaded only by preview-3.html, after main.css. index.html / main.css untouched.
    Base = 2안's very dark deep emerald at bbe6b1d (#051817 → #14413D),
-   with one emerald for the whole timeline and a 1안·2안·3안 switcher badge.
+   with a 1~5안 switcher badge. 2026-11-24: coral (火) reinforced at the small
+   details (section-label dash, 주력 사업 / 플랫폼 labels, the platform divider,
+   the two newest timeline dots, the CEO quote rule, the facts keys) so the warmth
+   runs down the page while the dark emerald keeps its weight.
    ========================================================================== */
 
 :root {
