@@ -128,6 +128,14 @@ body::before {
 .section-dark .section-label { color: #F0704F; }
 .section-label::before { background: #C74629; opacity: 1; }
 .section-dark .section-label::before { background: #F0704F; }
+/* main.css's .contact-left > p (0,1,1) outranks .section-label, so the 연락처
+   label was still painted as body copy (15.5px, ink-soft); restore it to the set. */
+.contact-left .section-label {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .02em;
+  color: #BC4128;
+}
 
 /* ---------- Technology ---------- */
 .tech-lead {
