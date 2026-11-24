@@ -33,6 +33,8 @@
   --line-strong: rgba(12, 34, 30, .27);
   --line-dark: rgba(255, 255, 255, .14);
   --line-dark-soft: rgba(255, 255, 255, .07);
+  /* light text used by the switcher badge; main.css has no --ivory of its own */
+  --ivory: #F4F8F7;
 }
 
 /* 木 → 火 accent rule along the very top */
