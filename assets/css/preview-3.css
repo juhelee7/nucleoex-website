@@ -109,6 +109,12 @@ body::before {
 .section-dark .section-label { color: var(--brand-300); }
 .section-dark .section-desc { color: rgba(244, 248, 247, .62); }
 
+/* 火 — the small dash before every section label carries the coral thread
+   down the whole scroll (회사 소개 · 핵심 기술 · 차별성 · 연혁 · CEO 인사 · 연락처).
+   Decorative 1px rule only: label text keeps its mint/emerald colour for AA contrast. */
+.section-label::before { background: #C74629; opacity: 1; }
+.section-dark .section-label::before { background: #F0704F; }
+
 /* ---------- Technology ---------- */
 .tech-lead {
   background: #0D2F2C;
@@ -117,8 +123,43 @@ body::before {
 .tech-lead-media { border-right-color: rgba(78, 216, 184, .18); }
 /* main.css paints every .tech-lead-body p grey; lift the body copy but keep the mint tag */
 .tech-lead-body p:not(.tech-lead-tag) { color: rgba(244, 248, 247, .78); }
-.tech-lead-tag { color: var(--eco-300); }
-.feature-label { color: var(--eco-300); }
+/* 火 — '주력 사업' tag: coral with a short lead-in rule (4.9:1 on #0D2F2C) */
+.tech-lead-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #F0704F;
+}
+.tech-lead-tag::before {
+  content: "";
+  flex: none;
+  width: 14px; height: 1px;
+  background: currentColor;
+  opacity: .9;
+}
+
+/* 火 — '생물 유래 분자 플랫폼' label and the hairline above it */
+.feature-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #F0704F;
+}
+.feature-label::before {
+  content: "";
+  flex: none;
+  width: 14px; height: 1px;
+  background: currentColor;
+  opacity: .9;
+}
+.feature { border-top: 0; position: relative; }
+.feature::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(232, 93, 63, .62), rgba(232, 93, 63, .22) 26%, rgba(78, 216, 184, .16) 62%, rgba(244, 248, 247, .06) 100%);
+}
 .chips li {
   border-color: rgba(78, 216, 184, .26);
   color: rgba(226, 250, 243, .74);
@@ -134,15 +175,31 @@ body::before {
 .pipeline-media [stroke="#A9ACEA"] { stroke: #6EE7B7; }
 
 /* ---------- Milestones ---------- */
-/* one emerald for the whole timeline: line, every year dot, key years alike */
+/* 木 for the archive, 火 for the latest: the line starts coral and settles into emerald,
+   and the two newest milestones (2026 재인증, 2025 딥테크 팁스·투자) keep a coral dot. */
 .timeline::before {
-  background: linear-gradient(180deg, rgba(15, 118, 110, .55), rgba(15, 118, 110, .28));
+  background: linear-gradient(180deg, rgba(232, 93, 63, .62) 0%, rgba(232, 93, 63, .32) 9%, rgba(15, 118, 110, .30) 27%, rgba(15, 118, 110, .48) 100%);
 }
 .timeline > li::before { background: var(--eco-600); }
 .timeline .year { color: var(--eco-600); }
+.timeline > li:nth-child(1)::before,
+.timeline > li:nth-child(2)::before {
+  background: #E85D3F;
+  box-shadow: 0 0 0 3px rgba(232, 93, 63, .14);
+}
+.timeline > li:nth-child(1) .year,
+.timeline > li:nth-child(2) .year { color: #BC4128; }
 
 /* ---------- CEO ---------- */
-.ceo blockquote { border-left-color: var(--eco-500); }
+/* 火 — the quote rule is the one warm line in the dark CEO block */
+.ceo blockquote {
+  border-left-width: 2px;
+  border-left-color: #E85D3F;
+}
+
+/* ---------- About facts ---------- */
+/* 火 — small coral keys in the facts table (4.62:1 on the cool paper) */
+.facts dt { color: #BC4128; }
 
 /* ---------- Contact ---------- */
 .copy-btn { border-color: rgba(15, 118, 110, .34); }
